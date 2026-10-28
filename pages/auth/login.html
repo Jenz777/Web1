@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Đăng nhập | TTL Shop</title>
+      <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/ui-overrides.css">
+</head>
+
+<body>
+  <!-- ===== Thanh thông báo trên cùng ===== -->
+  <!-- ===== Thanh thông báo trên cùng ===== -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <b>Miễn phí giao hàng cho đơn từ 300.000đ</b>
+      <div class="topbar-links">
+        <span>Thông báo sản phẩm mới mỗi tuần</span>
+        <a href="#contact">Hỗ trợ: 1900 1234</a>
+      </div>
+    </div>
+  </div>
+  <!-- ===== Header: logo, tìm kiếm, đăng nhập, giỏ hàng + menu ===== -->
+  <!-- ===== Header: logo, tìm kiếm, đăng nhập, giỏ hàng + menu ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="../../index.html">
+        <img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm">
+      </a>
+      <form class="search" action="../tim-kiem/tim-kiem.html#tab-co-ban">
+        <input type="search" name="q" placeholder="Tìm sản phẩm...">
+        <button type="submit">Tìm</button>
+      </form>
+      <div class="header-actions">
+        <a class="account-link" href="login.html">
+          <span class="account-icon" aria-hidden="true"></span>
+          <span>Tài khoản</span>
+        </a>
+        <a class="order-link" href="../mua-hang/kiem-tra-don-hang.html"><span class="order-icon"
+            aria-hidden="true"></span><span>Kiểm tra đơn</span></a>
+        <a class="cart-link" href="../mua-hang/cart.html">
+          <span class="cart-icon" aria-hidden="true"></span>
+          <span>Giỏ hàng</span>
+          <span class="cart-badge">5</span>
+        </a>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="nav-link" href="../../index.html">Trang chủ</a>
+        <a class="nav-link" href="../danh-muc/category-so-tay.html">Sổ tay</a>
+        <a class="nav-link" href="../danh-muc/category-but-viet.html">Bút viết</a>
+        <a class="nav-link" href="../danh-muc/category-giay-file.html">Giấy &amp; File bìa</a>
+        <a class="nav-link" href="../danh-muc/category-do-dung-hoc-tap.html">Đồ dùng học tập</a>
+        <a class="nav-link" href="../danh-muc/category-mau-hoa-cu.html">Màu &amp; Họa cụ</a>
+        <a class="nav-link nav-hot" href="../danh-muc/top-ban-chay.html">Bán chạy</a>
+        <a class="nav-link" href="../danh-gia.html">Đánh giá</a>
+      </div>
+    </nav>
+  </header>
+  <main class="auth-page">
+    <aside class="auth-aside">
+      <h1>Chào mừng bạn quay lại!</h1>
+      <p>Đăng nhập để tiếp tục mua sắm và quản lý đơn hàng của bạn.</p>
+      <ul class="auth-benefits">
+        <li>Xem giỏ hàng và thanh toán nhanh hơn</li>
+        <li>Theo dõi tình trạng đơn hàng mọi lúc</li>
+        <li>Quản lý thông tin cá nhân và địa chỉ giao hàng</li>
+      </ul>
+    </aside>
+    <section class="auth-card" aria-labelledby="login-title">
+      <nav class="login-switch" aria-label="Chọn loại tài khoản"><a class="on" href="login.html" aria-current="page">Khách hàng</a><a href="../../admin/login.html">Quản trị viên</a></nav>
+      <h2 id="login-title">Đăng nhập</h2>
+      <p class="auth-sub">Nhập email và mật khẩu đã đăng ký.</p>
+      <!-- Không có máy chủ: đăng nhập xong chuyển tới trang thông báo thành công, trang đó tự chuyển sang giỏ hàng. -->
+      <form class="auth-form" action="dang-nhap-thanh-cong.html" method="post">
+        <div class="form-field">
+          <label for="login-email">Email<span class="req"> *</span></label>
+          <input id="login-email" name="email" type="email" placeholder="ten@example.com" required autocomplete="email">
+        </div>
+        <div class="form-field">
+          <label for="login-password">Mật khẩu<span class="req"> *</span></label>
+          <input id="login-password" name="password" type="password" placeholder="Nhập mật khẩu" required minlength="6" autocomplete="current-password">
+        </div>
+        <label class="auth-check"><input type="checkbox" name="remember"><span>Ghi nhớ đăng nhập</span></label>
+        <button class="btn btn-primary full" type="submit">Đăng nhập</button>
+        <p class="auth-switch">Chưa có tài khoản? <a href="dang-ky.html">Đăng ký ngay</a></p>
+      </form>
+    </section>
+  </main>
+  <!-- ===== Footer ===== -->
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo logo-footer">
+          <img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm">
+        </div>
+        <p class="footer-branch"><b>Chi nhánh Hà Nội:</b> 260 Lê Trọng Tấn, Thanh Xuân, Hà Nội</p><p class="footer-branch"><b>Chi nhánh TP. Hồ Chí Minh:</b> 273 An Dương Vương, Phường Chợ Quán, TP. Hồ Chí Minh</p><p>1900 1234 — hotro@ttlshop.vn</p>
+      </div>
+      <div class="footer-col">
+        <h4>Về chúng tôi</h4>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Thông tin liên hệ</a>
+        <a href="#">Chính sách bảo mật thông tin cá nhân</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hỗ trợ khách hàng</h4>
+        <a href="#">Hướng dẫn mua hàng</a>
+        <a href="#">Hướng dẫn thanh toán</a>
+        <a href="#">Chính sách giao hàng</a>
+        <a href="#">Chính sách đổi trả &amp; hoàn tiền</a>
+        <a href="#">Thông tin liên hệ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Thanh toán</h4>
+        <div class="pay-methods"><span class="pay-item"><span class="pay-ico pay-visa"
+              aria-hidden="true"></span>Visa</span><span class="pay-item"><span class="pay-ico pay-visa"
+              aria-hidden="true"></span>Mastercard</span><span class="pay-item"><span class="pay-ico pay-bank"
+              aria-hidden="true"></span>Ngân hàng</span><span class="pay-item"><span class="pay-ico pay-momo"
+              aria-hidden="true"></span>Momo</span><span class="pay-item"><span class="pay-ico pay-zalo"
+              aria-hidden="true"></span>ZaloPay</span><span class="pay-item"><span class="pay-ico pay-cod"
+              aria-hidden="true"></span>COD</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 TTL Shop. Mọi quyền được bảo lưu.</div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lịch sử mua hàng | TTL Shop</title>
+      <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/ui-overrides.css">
+</head>
+
+<body>
+  <!-- ===== Thanh thông báo trên cùng ===== -->
+  <!-- ===== Thanh thông báo trên cùng ===== -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <b>Miễn phí giao hàng cho đơn từ 300.000đ</b>
+      <div class="topbar-links">
+        <span>Thông báo sản phẩm mới mỗi tuần</span>
+        <a href="#contact">Hỗ trợ: 1900 1234</a>
+      </div>
+    </div>
+  </div>
+  <!-- ===== Header: logo, tìm kiếm, đăng nhập, giỏ hàng + menu ===== -->
+  <!-- ===== Header: logo, tìm kiếm, đăng nhập, giỏ hàng + menu ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="../../index.html">
+        <img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm">
+      </a>
+      <form class="search" action="../tim-kiem/tim-kiem.html#tab-co-ban">
+        <input type="search" name="q" placeholder="Tìm sản phẩm...">
+        <button type="submit">Tìm</button>
+      </form>
+      <div class="header-actions">
+        <a class="account-link" href="tai-khoan.html">
+          <span class="account-icon" aria-hidden="true"></span>
+          <span>Tài khoản</span>
+        </a>
+        <a class="order-link" href="../mua-hang/kiem-tra-don-hang.html"><span class="order-icon"
+            aria-hidden="true"></span><span>Kiểm tra đơn</span></a>
+        <a class="cart-link" href="../mua-hang/cart.html">
+          <span class="cart-icon" aria-hidden="true"></span>
+          <span>Giỏ hàng</span>
+          <span class="cart-badge">5</span>
+        </a>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="nav-link" href="../../index.html">Trang chủ</a>
+        <a class="nav-link" href="../danh-muc/category-so-tay.html">Sổ tay</a>
+        <a class="nav-link" href="../danh-muc/category-but-viet.html">Bút viết</a>
+        <a class="nav-link" href="../danh-muc/category-giay-file.html">Giấy &amp; File bìa</a>
+        <a class="nav-link" href="../danh-muc/category-do-dung-hoc-tap.html">Đồ dùng học tập</a>
+        <a class="nav-link" href="../danh-muc/category-mau-hoa-cu.html">Màu &amp; Họa cụ</a>
+        <a class="nav-link nav-hot" href="../danh-muc/top-ban-chay.html">Bán chạy</a>
+        <a class="nav-link" href="../danh-gia.html">Đánh giá</a>
+      </div>
+    </nav>
+  </header>
+  <main class="profile-page">
+    <aside class="profile-side">
+      <div class="profile-avatar" aria-hidden="true">A</div>
+      <h2>Nguyễn Văn An</h2>
+      <p class="profile-mail">annguyen@example.com</p>
+      <nav class="profile-menu" aria-label="Menu tài khoản">
+        <a href="tai-khoan.html">Thông tin cá nhân</a>
+        <a href="tai-khoan.html#dia-chi">Địa chỉ giao hàng</a>
+        <a href="tai-khoan.html#mat-khau">Đổi mật khẩu</a>
+        <a href="lich-su-mua-hang.html" class="profile-active">Lịch sử mua hàng</a>
+        <a href="../mua-hang/cart.html">Giỏ hàng</a>
+        <a href="../../index.html" class="profile-logout">Đăng xuất</a>
+      </nav>
+    </aside>
+    <div class="profile-content hist-wrap">
+      <section class="auth-card">
+        <h2>Lịch sử mua hàng</h2>
+        <p class="auth-sub">Các đơn hàng bạn đã đặt, nhóm theo từng đơn, mới nhất ở trên.</p>
+        <input type="radio" name="hf" id="hf-all" class="hist-radio" checked>
+        <input type="radio" name="hf" id="hf-pending" class="hist-radio">
+        <input type="radio" name="hf" id="hf-done" class="hist-radio">
+        <div class="hist-tabs">
+          <label for="hf-all">Tất cả (3)</label>
+          <label for="hf-pending">Chờ xác nhận</label>
+          <label for="hf-done">Đã giao</label>
+        </div>
+        <div class="hist-list">
+      <article class="hist-order" data-s="pending">
+        <header class="hist-head">
+          <div><b>Đơn hàng TP20261018</b><span>Đặt ngày 18/10/2026 14:32 · Tiền mặt khi nhận hàng (COD)</span></div>
+          <span class="hist-status hist-pending">Chờ xác nhận</span>
+        </header>
+        <div class="hist-items">
+          <div class="hist-item"><img src="../../assets/images/so-tay-bia-cung-a5.jpg" alt="Sổ tay bìa cứng A5 dòng kẻ">
+            <div><span class="product-brand">Moleskine</span><h4 class="product-name">Sổ tay bìa cứng A5 dòng kẻ</h4><p>180.000đ × 2</p></div>
+            <strong>360.000đ</strong></div>
+          <div class="hist-item"><img src="../../assets/images/but-fineliner-24-mau.jpg" alt="Bút fineliner 24 màu">
+            <div><span class="product-brand">Sakura</span><h4 class="product-name">Bút fineliner 24 màu</h4><p>235.000đ × 1</p></div>
+            <strong>235.000đ</strong></div>
+          <div class="hist-item"><img src="../../assets/images/giay-note-sticky-5-mau.jpg" alt="Giấy note sticky 5 màu (12 gói)">
+            <div><span class="product-brand">3M Post-it</span><h4 class="product-name">Giấy note sticky 5 màu (12 gói)</h4><p>85.000đ × 2</p></div>
+            <strong>170.000đ</strong></div>
+        </div>
+        <footer class="hist-foot">
+          <span>5 sản phẩm · Tổng cộng: <b>765.000đ</b></span>
+          <div class="success-actions"><a class="btn btn-secondary btn-sm" href="../mua-hang/kiem-tra-don-hang.html">Theo dõi đơn</a><a class="btn btn-primary btn-sm" href="../mua-hang/cart.html">Mua lại</a></div>
+        </footer>
+      </article>
+      <article class="hist-order" data-s="done">
+        <header class="hist-head">
+          <div><b>Đơn hàng TP20260925</b><span>Đặt ngày 25/09/2026 09:15 · Ví MoMo</span></div>
+          <span class="hist-status hist-done">Đã giao</span>
+        </header>
+        <div class="hist-items">
+          <div class="hist-item"><img src="../../assets/images/but-bi-12-mau-0-7mm.jpg" alt="Hộp 12 bút bi nhiều màu 0.7mm">
+            <div><span class="product-brand">Pentel</span><h4 class="product-name">Hộp 12 bút bi nhiều màu 0.7mm</h4><p>95.000đ × 2</p></div>
+            <strong>190.000đ</strong></div>
+          <div class="hist-item"><img src="../../assets/images/so-journal-a6-dot-pastel.jpg" alt="Sổ journal A6 chấm dot pastel">
+            <div><span class="product-brand">Leuchtturm</span><h4 class="product-name">Sổ journal A6 chấm dot pastel</h4><p>165.000đ × 1</p></div>
+            <strong>165.000đ</strong></div>
+        </div>
+        <footer class="hist-foot">
+          <span>3 sản phẩm · Tổng cộng: <b>355.000đ</b></span>
+          <div class="success-actions"><a class="btn btn-secondary btn-sm" href="../mua-hang/kiem-tra-don-hang.html">Theo dõi đơn</a><a class="btn btn-primary btn-sm" href="../mua-hang/cart.html">Mua lại</a></div>
+        </footer>
+      </article>
+      <article class="hist-order" data-s="done">
+        <header class="hist-head">
+          <div><b>Đơn hàng TP20260812</b><span>Đặt ngày 12/08/2026 19:47 · Chuyển khoản ngân hàng</span></div>
+          <span class="hist-status hist-done">Đã giao</span>
+        </header>
+        <div class="hist-items">
+          <div class="hist-item"><img src="../../assets/images/set-dung-cu-hoc-tap-6-mon.jpg" alt="Set dụng cụ học tập 6 món giá treo">
+            <div><span class="product-brand">Deli</span><h4 class="product-name">Set dụng cụ học tập 6 món giá treo</h4><p>245.000đ × 1</p></div>
+            <strong>245.000đ</strong></div>
+        </div>
+        <footer class="hist-foot">
+          <span>1 sản phẩm · Tổng cộng: <b>245.000đ</b></span>
+          <div class="success-actions"><a class="btn btn-secondary btn-sm" href="../mua-hang/kiem-tra-don-hang.html">Theo dõi đơn</a><a class="btn btn-primary btn-sm" href="../mua-hang/cart.html">Mua lại</a></div>
+        </footer>
+      </article>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- ===== Footer ===== -->
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo logo-footer">
+          <img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm">
+        </div>
+        <p class="footer-branch"><b>Chi nhánh Hà Nội:</b> 260 Lê Trọng Tấn, Thanh Xuân, Hà Nội</p><p class="footer-branch"><b>Chi nhánh TP. Hồ Chí Minh:</b> 273 An Dương Vương, Phường Chợ Quán, TP. Hồ Chí Minh</p><p>1900 1234 — hotro@ttlshop.vn</p>
+      </div>
+      <div class="footer-col">
+        <h4>Về chúng tôi</h4>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Thông tin liên hệ</a>
+        <a href="#">Chính sách bảo mật thông tin cá nhân</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hỗ trợ khách hàng</h4>
+        <a href="#">Hướng dẫn mua hàng</a>
+        <a href="#">Hướng dẫn thanh toán</a>
+        <a href="#">Chính sách giao hàng</a>
+        <a href="#">Chính sách đổi trả &amp; hoàn tiền</a>
+        <a href="#">Thông tin liên hệ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Thanh toán</h4>
+        <div class="pay-methods"><span class="pay-item"><span class="pay-ico pay-visa"
+              aria-hidden="true"></span>Visa</span><span class="pay-item"><span class="pay-ico pay-visa"
+              aria-hidden="true"></span>Mastercard</span><span class="pay-item"><span class="pay-ico pay-bank"
+              aria-hidden="true"></span>Ngân hàng</span><span class="pay-item"><span class="pay-ico pay-momo"
+              aria-hidden="true"></span>Momo</span><span class="pay-item"><span class="pay-ico pay-zalo"
+              aria-hidden="true"></span>ZaloPay</span><span class="pay-item"><span class="pay-ico pay-cod"
+              aria-hidden="true"></span>COD</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 TTL Shop. Mọi quyền được bảo lưu.</div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Giỏ hàng | TTL Shop</title>
+            <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/ui-overrides.css">
+</head>
+
+<body class="cart-page">
+    <div class="topbar">
+        <div class="topbar-inner"><b>Miễn phí giao hàng cho đơn từ 300.000đ</b>
+            <div class="topbar-links"><span>Thông báo sản phẩm mới mỗi tuần</span><a href="#contact">Hỗ trợ: 1900 1234</a>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header-inner"><a class="logo" href="../../index.html"><img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm"></a>
+            <form class="search" action="../tim-kiem/tim-kiem.html#tab-co-ban"><input type="search" name="q"
+                    placeholder="Tìm sản phẩm..."><button type="submit">Tìm</button></form>
+            <div class="header-actions"><a class="account-link" href="../tai-khoan/tai-khoan.html"><span class="account-icon"
+                        aria-hidden="true"></span><span>Tài khoản</span></a><a class="order-link"
+                    href="kiem-tra-don-hang.html"><span class="order-icon" aria-hidden="true"></span><span>Kiểm tra
+                        đơn</span></a><a class="cart-link" href="cart.html" aria-current="page"><span class="cart-icon"
+                        aria-hidden="true"></span><span>Giỏ hàng</span><span class="cart-badge">5</span></a></div>
+        </div>
+        <nav class="nav">
+            <div class="nav-inner"><a class="nav-link" href="../../index.html">Trang chủ</a><a class="nav-link"
+                    href="../danh-muc/category-so-tay.html">Sổ tay</a><a class="nav-link" href="../danh-muc/category-but-viet.html">Bút
+                    viết</a><a class="nav-link" href="../danh-muc/category-giay-file.html">Giấy &amp; File bìa</a><a
+                    class="nav-link" href="../danh-muc/category-do-dung-hoc-tap.html">Đồ dùng học tập</a><a class="nav-link"
+                    href="../danh-muc/category-mau-hoa-cu.html">Màu &amp; Họa cụ</a><a class="nav-link nav-hot"
+                    href="../danh-muc/top-ban-chay.html">Bán chạy</a><a class="nav-link" href="../danh-gia.html">Đánh giá</a></div>
+        </nav>
+    </header>
+    <main class="page">
+        <a class="back-link" href="../../index.html">← Tiếp tục mua sắm</a>
+        <div class="section-head">
+            <h2>Giỏ hàng của bạn</h2>
+        </div>
+
+        <section class="cart-account" aria-labelledby="account-title">
+            <span class="cart-account-icon" aria-hidden="true">✓</span>
+            <div class="cart-account-info">
+                <h3 id="account-title">Tài khoản mua hàng</h3>
+                <p><strong>Nguyễn Văn An</strong><span>annguyen@example.com</span><span>0901 234 567</span></p>
+            </div>
+            <a href="../auth/login.html">Đổi tài khoản / Đăng xuất</a>
+        </section>
+        <p class="cart-login-note">Đặt hàng yêu cầu đăng nhập. Thông tin trên là tài khoản đang đăng nhập (dữ liệu mô
+            phỏng).</p>
+
+        <form class="cart-checkout" action="don-hang-thanh-cong.html" method="get">
+            <div class="cart-layout">
+                <section class="cart-list" aria-label="Sản phẩm trong giỏ và thông tin giao hàng">
+                    <section aria-labelledby="cart-items-title">
+                        <h3 id="cart-items-title">Sản phẩm <span>5 sản phẩm · 3 mặt hàng</span></h3>
+
+                        <article class="cart-row">
+                            <img src="../../assets/images/so-tay-bia-cung-a5.jpg"
+                                alt="Sổ tay bìa cứng A5 dòng kẻ">
+                            <div>
+                                <span class="product-brand">Moleskine</span>
+                                <h4 class="product-name">Sổ tay bìa cứng A5 dòng kẻ</h4>
+                                <p>Đơn giá: 180.000đ</p>
+                            </div>
+                            <input class="qty" type="number" value="2" min="1" max="99" aria-label="Số lượng sổ tay">
+                            <strong>360.000đ</strong>
+                            <label class="cart-remove" title="Ẩn sản phẩm khỏi giỏ hàng"><input
+                                    class="cart-remove-toggle" type="checkbox" name="remove" value="notebook"><span
+                                    aria-hidden="true">×</span><span class="sr-only">Ẩn sổ tay khỏi giỏ
+                                    hàng</span></label>
+                        </article>
+
+                        <article class="cart-row">
+                            <img src="../../assets/images/but-fineliner-24-mau.jpg"
+                                alt="Bút fineliner 24 màu">
+                            <div>
+                                <span class="product-brand">Sakura</span>
+                                <h4 class="product-name">Bút fineliner 24 màu</h4>
+                                <p>Đơn giá: 235.000đ</p>
+                            </div>
+                            <input class="qty" type="number" value="1" min="1" max="99"
+                                aria-label="Số lượng bút fineliner">
+                            <strong>235.000đ</strong>
+                            <label class="cart-remove" title="Ẩn sản phẩm khỏi giỏ hàng"><input
+                                    class="cart-remove-toggle" type="checkbox" name="remove" value="fineliners"><span
+                                    aria-hidden="true">×</span><span class="sr-only">Ẩn bút fineliner khỏi giỏ
+                                    hàng</span></label>
+                        </article>
+
+                        <article class="cart-row">
+                            <img src="../../assets/images/giay-note-sticky-5-mau.jpg"
+                                alt="Giấy note sticky 5 màu, 12 gói">
+                            <div>
+                                <span class="product-brand">3M Post-it</span>
+                                <h4 class="product-name">Giấy note sticky 5 màu (12 gói)</h4>
+                                <p>Đơn giá: 85.000đ</p>
+                            </div>
+                            <input class="qty" type="number" value="2" min="1" max="99" aria-label="Số lượng giấy note">
+                            <strong>170.000đ</strong>
+                            <label class="cart-remove" title="Ẩn sản phẩm khỏi giỏ hàng"><input
+                                    class="cart-remove-toggle" type="checkbox" name="remove" value="notes"><span
+                                    aria-hidden="true">×</span><span class="sr-only">Ẩn giấy note khỏi giỏ
+                                    hàng</span></label>
+                        </article>
+                    </section>
+
+                    <hr>
+
+                    <section aria-labelledby="delivery-title">
+                        <h3 id="delivery-title">Địa chỉ giao hàng</h3>
+                        <fieldset class="address-options">
+                            <legend>Chọn địa chỉ nhận hàng</legend>
+                            <p>
+                                <label>
+                                    <input type="radio" name="address" value="home" checked required>
+                                    <strong>Nhà riêng — Nguyễn Văn An</strong> <span class="address-tag">Mặc
+                                        định</span><br>
+                                    Số 12, ngõ 45 Nguyễn Chánh, Cầu Giấy, Hà Nội — 0901 234 567
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" name="address" value="office" required>
+                                    <strong>Công ty — Nguyễn Văn An</strong> <span
+                                        class="address-tag address-tag-work">Công ty</span><br>
+                                    Tầng 5, tòa nhà B24, Đường số 10, Khu đô thị Mỗ Lao, Hà Đông, Hà Nội — 0901 234 567
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" name="address" value="new" required>
+                                    <strong>Nhập địa chỉ giao hàng mới</strong><br>
+                                    Điền thông tin người nhận và địa chỉ bên dưới.
+                                </label>
+                            </p>
+                            <div class="new-address-fields">
+                                <label for="recipient-name">Tên người nhận</label>
+                                <input id="recipient-name" type="text" autocomplete="name"
+                                    placeholder="VD: Trần Thị Bích">
+                                <label for="recipient-phone">Số điện thoại</label>
+                                <input id="recipient-phone" type="tel" autocomplete="tel"
+                                    placeholder="VD: 0987 654 321">
+                                <label for="recipient-address">Địa chỉ chi tiết</label>
+                                <textarea id="recipient-address" rows="3" autocomplete="street-address"
+                                    placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố"></textarea>
+                                <p>Địa chỉ mới chỉ dùng cho đơn hàng này, không lưu vào tài khoản.</p>
+                            </div>
+                        </fieldset>
+                    </section>
+
+                    <hr>
+
+                    <section id="payment" aria-labelledby="payment-title">
+                        <h3 id="payment-title">Hình thức thanh toán</h3>
+                        <fieldset>
+                            <legend>Chọn cách thanh toán</legend>
+                            <p>
+                                <label>
+                                    <input type="radio" name="payment" value="cod" checked required>
+                                    <span class="payment-badge">COD</span>
+                                    <strong>Tiền mặt khi nhận hàng</strong><br>
+                                    Thanh toán cho nhân viên giao hàng khi nhận sản phẩm.
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" name="payment" value="online" required>
+                                    <span class="payment-badge payment-badge-online">ONLINE</span>
+                                    <strong>Thanh toán trực tuyến</strong><br>
+                                    Chọn chuyển khoản ngân hàng hoặc ví điện tử khi thanh toán.
+                                </label>
+                            </p>
+                        </fieldset>
+                        <p>Lưu ý: Không có trang thanh toán riêng. Hãy chọn một hình thức thanh toán ngay tại đây. Sau khi bấm Đặt hàng, bạn được chuyển đến trang đơn hàng mẫu (bản mô phỏng, chưa gửi hoặc lưu đơn lên máy chủ).</p>
+                    </section>
+                </section>
+
+                <aside class="summary" aria-labelledby="order-summary-title">
+                    <h3 id="order-summary-title">Tóm tắt đơn hàng</h3>
+                    <p><span>Tạm tính (5 sản phẩm)</span><span>765.000đ</span></p>
+                    <p><span>Phí giao hàng</span><span>Miễn phí</span></p>
+                    <hr>
+                    <p><strong>Tổng cộng</strong><strong>765.000đ</strong></p>
+                    <button class="btn btn-primary full" type="submit">Đặt hàng</button>
+                    <a class="btn btn-ghost full" href="../../index.html">Tiếp tục mua sắm</a>
+                    <p class="cart-summary-note">Thanh toán COD hoặc trực tuyến — bạn chọn ngay trong trang giỏ hàng.
+                        Tổng tiền đang là dữ liệu mẫu.</p>
+                </aside>
+            </div>
+        </form>
+    </main>
+    <footer class="footer" id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo logo-footer"><img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm"></div>
+                <p class="footer-branch"><b>Chi nhánh Hà Nội:</b> 260 Lê Trọng Tấn, Thanh Xuân, Hà Nội</p><p class="footer-branch"><b>Chi nhánh TP. Hồ Chí Minh:</b> 273 An Dương Vương, Phường Chợ Quán, TP. Hồ Chí Minh</p><p>1900 1234 — hotro@ttlshop.vn</p>
+            </div>
+            <div class="footer-col">
+                <h4>Về chúng tôi</h4><a href="#">Giới thiệu</a><a href="#">Thông tin liên hệ</a><a href="#">Chính sách
+                    bảo mật thông tin cá nhân</a>
+            </div>
+            <div class="footer-col">
+                <h4>Hỗ trợ khách hàng</h4><a href="#">Hướng dẫn mua hàng</a><a href="#">Hướng dẫn thanh toán</a><a
+                    href="#">Chính sách giao hàng</a><a href="#">Chính sách đổi trả &amp; hoàn tiền</a><a href="#">Thông
+                    tin liên hệ</a>
+            </div>
+            <div class="footer-col">
+                <h4>Thanh toán</h4>
+                <div class="pay-methods"><span class="pay-item"><span class="pay-ico pay-visa"
+                            aria-hidden="true"></span>Visa</span><span class="pay-item"><span class="pay-ico pay-visa"
+                            aria-hidden="true"></span>Mastercard</span><span class="pay-item"><span
+                            class="pay-ico pay-bank" aria-hidden="true"></span>Ngân hàng</span><span
+                        class="pay-item"><span class="pay-ico pay-momo" aria-hidden="true"></span>Momo</span><span
+                        class="pay-item"><span class="pay-ico pay-zalo" aria-hidden="true"></span>ZaloPay</span><span
+                        class="pay-item"><span class="pay-ico pay-cod" aria-hidden="true"></span>COD</span></div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 TTL Shop. Mọi quyền được bảo lưu.</div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sửa sản phẩm #13 | TTL Shop Admin</title>
+<link rel="stylesheet" href="../../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="adm">
+<input type="checkbox" id="nav-t" class="nav-t" aria-hidden="true" tabindex="-1">
+<div class="adm-shell">
+<aside class="adm-side">
+  <a class="adm-brand" href="../index.html"><span class="logo-mark"><img src="../../assets/images/logo-icon.png" alt="TTL Shop"></span><span>TTL Shop<small>Quản trị hệ thống</small></span></a>
+  <div class="adm-sec">Quản lý</div>
+  <nav aria-label="Menu quản trị"><a href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Tổng quan</a><a href="products.html" class="on" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>Sản phẩm</a><a href="../don-hang/orders.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>Đơn hàng</a><a href="../thong-ke/stats.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Thống kê</a><a href="../khach-hang/users.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 010 6.8M18.5 14.8c1.7.7 2.7 2.3 3 4.7"/></svg>Khách hàng</a><a href="../quan-tri-vien/admins.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>Quản trị viên</a></nav>
+  <div class="adm-me"><div class="adm-me-row"><span class="adm-avatar" aria-hidden="true">Q</span><span><b>Quản trị viên</b><small>Quản trị cấp cao</small></span></div><a class="btn btn-sm" href="../logout.html">Đăng xuất</a></div>
+</aside>
+<label class="adm-back" for="nav-t" aria-hidden="true"></label>
+<div class="adm-main">
+<header class="adm-top"><label class="adm-burger" for="nav-t" aria-label="Mở menu">☰</label><p class="crumb">Quản trị › <b>Sửa sản phẩm</b></p><a class="btn btn-out btn-sm" href="../../index.html" target="_blank">Xem cửa hàng ↗</a></header>
+<main class="adm-wrap">
+<div class="adm-head"><div><h1>Sửa sản phẩm #13</h1></div><div><a class="btn btn-out" href="products.html">← Về danh sách</a></div></div>
+<div class="adm-content">
+<p class="notice">Sản phẩm đã bán ra trong 1 đơn hàng nên khi bấm "Xoá" ở danh sách, sản phẩm chỉ bị ẩn khỏi website.</p><form action="product-saved.html" method="post" enctype="multipart/form-data"><div class="pf-grid">
+<section class="adm-card pf-media"><h2>Hình ảnh sản phẩm</h2><div class="pv"><img id="pimgv" src="../../assets/images/giay-note-sticky-5-mau.jpg" alt="Ảnh sản phẩm Giấy note sticky 5 màu (12 gói)"></div><p class="pv-note" id="pvn">Ảnh hiện tại. Chọn file mới nếu muốn thay ảnh.</p><input class="file-in" id="pimg" name="image" type="file" accept="image/*"></section>
+<section class="adm-card"><h2>Thông tin sản phẩm</h2><p class="adm-sub">Các ô có dấu <span class="req">*</span> là bắt buộc.</p><div class="adm-form"><div class="grid2">
+<div class="fld full"><label for="pn">Tên sản phẩm <span class="req">*</span></label><input id="pn" name="name" required minlength="3" value="Giấy note sticky 5 màu (12 gói)" placeholder="VD: Sổ tay bìa cứng A5 dòng kẻ"></div>
+<div class="fld"><label for="pc">Phân loại <span class="req">*</span></label><select id="pc" name="category" required><option>Sổ tay</option><option>Bút viết</option><option>Đồ dùng học tập</option><option selected>Giấy &amp; File bìa</option><option>Màu &amp; Họa cụ</option></select></div>
+<div class="fld"><label for="pb">Thương hiệu <span class="req">*</span></label><input id="pb" name="brand" required value="3M Post-it" placeholder="VD: Moleskine"></div>
+<div class="fld"><label for="ps">Mã sản phẩm (SKU) <span class="req">*</span></label><input id="ps" name="sku" required value="TTL-GF-013" placeholder="VD: TTL-ST-022"></div>
+<div class="fld"><label for="pp">Giá bán (đồng) <span class="req">*</span></label><input id="pp" name="price" type="number" min="1000" step="500" required value="85000" placeholder="VD: 180000"></div>
+<div class="fld"><label for="pk">Số lượng tồn kho <span class="req">*</span></label><input id="pk" name="stock" type="number" min="0" required value="200" placeholder="VD: 50"></div>
+<div class="fld"><label for="pt">Trạng thái</label><select id="pt" name="status"><option selected>Đang bán</option><option>Ngừng bán</option></select></div>
+<div class="fld full"><label for="pd">Mô tả ngắn <span class="req">*</span></label><textarea id="pd" name="short" rows="2" required>Giấy ghi chú dán lại được, màu pastel dễ thương.</textarea></div>
+<div class="fld full"><label for="ph">Đặc điểm nổi bật</label><textarea id="ph" name="highlights" rows="4">12 gói giấy note nhiều màu pastel
+Keo dán lại được nhiều lần
+Không để lại vết keo khi bóc
+Dùng đánh dấu sách, ghi nhắc việc</textarea><span class=hint>Mỗi dòng là một gạch đầu dòng trên trang chi tiết sản phẩm.</span></div>
+</div><div class="form-actions"><button class="btn btn-pri" type="submit">Lưu thay đổi</button><a class="btn btn-out" href="products.html">Huỷ</a></div></div></section></div></form>
+</div>
+</main>
+</div>
+</div>
+<script src="../assets/js/preview.js"></script>
+</body>
+</html>

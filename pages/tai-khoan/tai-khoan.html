@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Thông tin cá nhân | TTL Shop</title>
+      <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/ui-overrides.css">
+</head>
+
+<body>
+  <!-- ===== Thanh thông báo trên cùng ===== -->
+  <!-- ===== Thanh thông báo trên cùng ===== -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <b>Miễn phí giao hàng cho đơn từ 300.000đ</b>
+      <div class="topbar-links">
+        <span>Thông báo sản phẩm mới mỗi tuần</span>
+        <a href="#contact">Hỗ trợ: 1900 1234</a>
+      </div>
+    </div>
+  </div>
+  <!-- ===== Header: logo, tìm kiếm, đăng nhập, giỏ hàng + menu ===== -->
+  <!-- ===== Header: logo, tìm kiếm, đăng nhập, giỏ hàng + menu ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="../../index.html">
+        <img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm">
+      </a>
+      <form class="search" action="../tim-kiem/tim-kiem.html#tab-co-ban">
+        <input type="search" name="q" placeholder="Tìm sản phẩm...">
+        <button type="submit">Tìm</button>
+      </form>
+      <div class="header-actions">
+        <a class="account-link" href="tai-khoan.html">
+          <span class="account-icon" aria-hidden="true"></span>
+          <span>Tài khoản</span>
+        </a>
+        <a class="order-link" href="../mua-hang/kiem-tra-don-hang.html"><span class="order-icon"
+            aria-hidden="true"></span><span>Kiểm tra đơn</span></a>
+        <a class="cart-link" href="../mua-hang/cart.html">
+          <span class="cart-icon" aria-hidden="true"></span>
+          <span>Giỏ hàng</span>
+          <span class="cart-badge">5</span>
+        </a>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="nav-link" href="../../index.html">Trang chủ</a>
+        <a class="nav-link" href="../danh-muc/category-so-tay.html">Sổ tay</a>
+        <a class="nav-link" href="../danh-muc/category-but-viet.html">Bút viết</a>
+        <a class="nav-link" href="../danh-muc/category-giay-file.html">Giấy &amp; File bìa</a>
+        <a class="nav-link" href="../danh-muc/category-do-dung-hoc-tap.html">Đồ dùng học tập</a>
+        <a class="nav-link" href="../danh-muc/category-mau-hoa-cu.html">Màu &amp; Họa cụ</a>
+        <a class="nav-link nav-hot" href="../danh-muc/top-ban-chay.html">Bán chạy</a>
+        <a class="nav-link" href="../danh-gia.html">Đánh giá</a>
+      </div>
+    </nav>
+  </header>
+  <main class="profile-page">
+    <aside class="profile-side">
+      <div class="profile-avatar" aria-hidden="true">A</div>
+      <h2>Nguyễn Văn An</h2>
+      <p class="profile-mail">annguyen@example.com</p>
+      <nav class="profile-menu" aria-label="Menu tài khoản">
+        <a href="#thong-tin">Thông tin cá nhân</a>
+        <a href="#dia-chi">Địa chỉ giao hàng</a>
+        <a href="#mat-khau">Đổi mật khẩu</a>
+        <a href="#don-hang">Đơn hàng gần đây</a>
+        <a href="lich-su-mua-hang.html">Lịch sử mua hàng</a>
+        <a href="../mua-hang/cart.html">Giỏ hàng</a>
+        <a href="../../index.html" class="profile-logout">Đăng xuất</a>
+      </nav>
+    </aside>
+    <div class="profile-content">
+      <section class="auth-card" id="thong-tin">
+        <h2>Thông tin cá nhân</h2>
+        <p class="auth-sub">Cập nhật thông tin để đặt hàng nhanh hơn.</p>
+        <div class="auth-form">
+          <div class="form-grid">
+            <div class="form-field full-row"><label for="p-name">Họ và tên</label><input id="p-name" type="text" value="Nguyễn Văn An"></div>
+            <div class="form-field"><label for="p-email">Email</label><input id="p-email" type="email" value="annguyen@example.com"></div>
+            <div class="form-field"><label for="p-phone">Số điện thoại</label><input id="p-phone" type="tel" value="0901 234 567"></div>
+            <div class="form-field"><label for="p-dob">Ngày sinh</label><input id="p-dob" type="date" value="2000-05-20"></div>
+            <div class="form-field"><label for="p-gender">Giới tính</label>
+              <select id="p-gender"><option>Nam</option><option>Nữ</option><option>Khác</option></select></div>
+          </div>
+          <label class="btn btn-primary" for="save-1" role="button">Lưu thông tin</label>
+        </div>
+      </section>
+      <section class="auth-card" id="dia-chi">
+        <h2>Địa chỉ giao hàng mặc định</h2>
+        <p class="auth-sub">Địa chỉ này sẽ được điền sẵn khi thanh toán.</p>
+        <div class="auth-form">
+          <div class="form-grid">
+            <div class="form-field"><label for="p-province">Tỉnh / thành phố</label>
+              <select id="p-province"><option selected>Hà Nội</option><option>TP. Hồ Chí Minh</option><option>Đà Nẵng</option><option>Hải Phòng</option><option>Cần Thơ</option><option>Tỉnh / thành phố khác</option></select></div>
+            <div class="form-field"><label for="p-district">Quận / huyện</label><input id="p-district" type="text" value="Cầu Giấy"></div>
+            <div class="form-field full-row"><label for="p-address">Địa chỉ cụ thể</label><input id="p-address" type="text" value="Số 12, ngõ 45 Nguyễn Chánh"></div>
+          </div>
+          <label class="btn btn-primary" for="save-2" role="button">Lưu địa chỉ</label>
+        </div>
+      </section>
+      <section class="auth-card" id="mat-khau">
+        <h2>Đổi mật khẩu</h2>
+        <p class="auth-sub">Mật khẩu mới tối thiểu 6 ký tự.</p>
+        <div class="auth-form">
+          <div class="form-grid">
+            <div class="form-field full-row"><label for="p-old">Mật khẩu hiện tại</label><input id="p-old" type="password" autocomplete="current-password"></div>
+            <div class="form-field"><label for="p-new">Mật khẩu mới</label><input id="p-new" type="password" minlength="6" autocomplete="new-password"></div>
+            <div class="form-field"><label for="p-new2">Nhập lại mật khẩu mới</label><input id="p-new2" type="password" minlength="6" autocomplete="new-password"></div>
+          </div>
+          <label class="btn btn-primary" for="save-3" role="button">Đổi mật khẩu</label>
+        </div>
+      </section>
+      <section class="auth-card" id="don-hang">
+        <h2>Đơn hàng gần đây</h2>
+        <div class="profile-order">
+          <div><b>TP20261018</b><span>Đặt ngày 18/10/2026 · 5 sản phẩm</span></div>
+          <div class="profile-order-right"><b>765.000đ</b><span class="profile-status">Chờ xác nhận</span></div>
+        </div>
+        <a class="btn btn-primary btn-sm" href="lich-su-mua-hang.html">Xem lịch sử mua hàng</a> <a class="btn btn-secondary btn-sm" href="../mua-hang/kiem-tra-don-hang.html">Kiểm tra đơn hàng</a>
+      </section>
+    </div>
+  </main>
+<input type="checkbox" id="save-1" class="atc-toggle" aria-hidden="true" tabindex="-1">
+<div class="atc-modal" role="alertdialog" aria-label="Thông báo">
+  <label class="atc-backdrop" for="save-1"></label>
+  <div class="atc-box">
+    <div class="success-icon" aria-hidden="true"></div>
+    <h3>Đã lưu thông tin cá nhân!</h3>
+    <div class="success-actions"><label class="btn btn-primary btn-sm" for="save-1">Đóng</label></div>
+  </div>
+</div>
+<input type="checkbox" id="save-2" class="atc-toggle" aria-hidden="true" tabindex="-1">
+<div class="atc-modal" role="alertdialog" aria-label="Thông báo">
+  <label class="atc-backdrop" for="save-2"></label>
+  <div class="atc-box">
+    <div class="success-icon" aria-hidden="true"></div>
+    <h3>Đã lưu địa chỉ giao hàng!</h3>
+    <div class="success-actions"><label class="btn btn-primary btn-sm" for="save-2">Đóng</label></div>
+  </div>
+</div>
+<input type="checkbox" id="save-3" class="atc-toggle" aria-hidden="true" tabindex="-1">
+<div class="atc-modal" role="alertdialog" aria-label="Thông báo">
+  <label class="atc-backdrop" for="save-3"></label>
+  <div class="atc-box">
+    <div class="success-icon" aria-hidden="true"></div>
+    <h3>Đã đổi mật khẩu thành công!</h3>
+    <div class="success-actions"><label class="btn btn-primary btn-sm" for="save-3">Đóng</label></div>
+  </div>
+</div>
+
+  <!-- ===== Footer ===== -->
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo logo-footer">
+          <img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm">
+        </div>
+        <p class="footer-branch"><b>Chi nhánh Hà Nội:</b> 260 Lê Trọng Tấn, Thanh Xuân, Hà Nội</p><p class="footer-branch"><b>Chi nhánh TP. Hồ Chí Minh:</b> 273 An Dương Vương, Phường Chợ Quán, TP. Hồ Chí Minh</p><p>1900 1234 — hotro@ttlshop.vn</p>
+      </div>
+      <div class="footer-col">
+        <h4>Về chúng tôi</h4>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Thông tin liên hệ</a>
+        <a href="#">Chính sách bảo mật thông tin cá nhân</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hỗ trợ khách hàng</h4>
+        <a href="#">Hướng dẫn mua hàng</a>
+        <a href="#">Hướng dẫn thanh toán</a>
+        <a href="#">Chính sách giao hàng</a>
+        <a href="#">Chính sách đổi trả &amp; hoàn tiền</a>
+        <a href="#">Thông tin liên hệ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Thanh toán</h4>
+        <div class="pay-methods"><span class="pay-item"><span class="pay-ico pay-visa"
+              aria-hidden="true"></span>Visa</span><span class="pay-item"><span class="pay-ico pay-visa"
+              aria-hidden="true"></span>Mastercard</span><span class="pay-item"><span class="pay-ico pay-bank"
+              aria-hidden="true"></span>Ngân hàng</span><span class="pay-item"><span class="pay-ico pay-momo"
+              aria-hidden="true"></span>Momo</span><span class="pay-item"><span class="pay-ico pay-zalo"
+              aria-hidden="true"></span>ZaloPay</span><span class="pay-item"><span class="pay-ico pay-cod"
+              aria-hidden="true"></span>COD</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 TTL Shop. Mọi quyền được bảo lưu.</div>
+  </footer>
+</body>
+
+</html>

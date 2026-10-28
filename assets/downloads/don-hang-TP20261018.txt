@@ -1,0 +1,31 @@
+TTL SHOP - VĂN PHÒNG PHẨM
+ĐƠN HÀNG (BẢN SAO ĐỂ LƯU)
+============================================
+Mã đơn hàng : TP20261018
+Ngày đặt    : 18/10/2026 14:32
+Trạng thái  : Chờ xác nhận
+
+NGƯỜI NHẬN
+  Họ tên  : Nguyễn Văn An
+  Điện thoại: 0901 234 567
+  Email   : annguyen@example.com
+  Địa chỉ : Số 12, ngõ 45 Nguyễn Chánh, Cầu Giấy, Hà Nội
+
+THANH TOÁN
+  Tiền mặt khi nhận hàng (COD)
+
+SẢN PHẨM
+--------------------------------------------
+Sổ tay bìa cứng A5 dòng kẻ (Moleskine)
+  180.000đ x 2 = 360.000đ
+Bút fineliner 24 màu (Sakura)
+  235.000đ x 1 = 235.000đ
+Giấy note sticky 5 màu (12 gói) (3M Post-it)
+  85.000đ x 2 = 170.000đ
+--------------------------------------------
+Tạm tính (5 sản phẩm): 765.000đ
+Phí giao hàng: Miễn phí
+TỔNG CỘNG: 765.000đ
+============================================
+Hỗ trợ: 1900 1234 - hotro@ttlshop.vn
+Lưu ý: đây là dữ liệu mẫu của đồ án (trang tĩnh, không có cơ sở dữ liệu).

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thống kê &amp; báo cáo | TTL Shop Admin</title>
+<link rel="stylesheet" href="../../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="adm">
+<input type="checkbox" id="nav-t" class="nav-t" aria-hidden="true" tabindex="-1">
+<div class="adm-shell">
+<aside class="adm-side">
+  <a class="adm-brand" href="../index.html"><span class="logo-mark"><img src="../../assets/images/logo-icon.png" alt="TTL Shop"></span><span>TTL Shop<small>Quản trị hệ thống</small></span></a>
+  <div class="adm-sec">Quản lý</div>
+  <nav aria-label="Menu quản trị"><a href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Tổng quan</a><a href="../san-pham/products.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>Sản phẩm</a><a href="../don-hang/orders.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>Đơn hàng</a><a href="stats.html" class="on" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Thống kê</a><a href="../khach-hang/users.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 010 6.8M18.5 14.8c1.7.7 2.7 2.3 3 4.7"/></svg>Khách hàng</a><a href="../quan-tri-vien/admins.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>Quản trị viên</a></nav>
+  <div class="adm-me"><div class="adm-me-row"><span class="adm-avatar" aria-hidden="true">Q</span><span><b>Quản trị viên</b><small>Quản trị cấp cao</small></span></div><a class="btn btn-sm" href="../logout.html">Đăng xuất</a></div>
+</aside>
+<label class="adm-back" for="nav-t" aria-hidden="true"></label>
+<div class="adm-main">
+<header class="adm-top"><label class="adm-burger" for="nav-t" aria-label="Mở menu">☰</label><p class="crumb">Quản trị › <b>Thống kê</b></p><a class="btn btn-out btn-sm" href="../../index.html" target="_blank">Xem cửa hàng ↗</a></header>
+<main class="adm-wrap">
+<div class="adm-head"><div><h1>Thống kê &amp; báo cáo</h1><p>Phân tích khách hàng có mức mua cao nhất theo khoảng thời gian.</p></div><div><span class="dash-period">Kỳ báo cáo: 01/08/2026 – 22/10/2026 · 83 ngày</span></div></div>
+<div class="adm-content">
+<section class="adm-card dash-filter" aria-label="Bộ lọc thời gian">
+<form class="ofilter st-f" action="stats.html" method="get"><div class="fld"><label for="sf">Từ ngày</label><input type="date" id="sf" name="from" value="2026-08-01"></div><div class="fld"><label for="st">Đến ngày</label><input type="date" id="st" name="to" value="2026-10-22"></div><button class="btn btn-pri btn-sm" type="submit">Thống kê</button></form>
+<p class="hint">Chỉ tính đơn <b>Đã giao thành công</b>; đơn đã huỷ hoặc chưa giao xong không được tính là khách đã mua.</p>
+</section>
+<section class="dash-kpis" aria-label="Chỉ số tổng quan">
+<article class="dash-kpi k1"><span class="dash-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-5 4 4 8-9M15 7h5v5"/></svg></span><div><small>Doanh thu</small><b>2.563.000đ</b><em>Đơn giao thành công</em></div></article>
+<article class="dash-kpi k2"><span class="dash-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></span><div><small>Số đơn hàng</small><b>8</b><em>Trong kỳ báo cáo</em></div></article>
+<article class="dash-kpi k3"><span class="dash-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/></svg></span><div><small>Khách hàng mua</small><b>7</b><em>Hiển thị top 5</em></div></article>
+<article class="dash-kpi k4"><span class="dash-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M16.5 7.5C15.5 6.3 13.9 6 12 6c-2.2 0-3.8 1-3.8 2.7 0 4 8 1.8 8 6 0 1.8-1.7 3.3-4.2 3.3-2 0-3.8-.6-4.8-2"/></svg></span><div><small>Giá trị TB / đơn</small><b>320.375đ</b><em>Doanh thu ÷ số đơn</em></div></article>
+</section>
+<div class="dash-grid">
+<section class="adm-card dash-main"><div class="dash-ct"><h2>Top 5 khách hàng mua nhiều nhất</h2><span class="dash-tag">Sắp xếp giảm dần theo tổng mua</span></div>
+<div class="tbl-wrap"><table class="tbl dash-rt"><thead><tr><th>Hạng</th><th>Khách hàng</th><th class="num">Số đơn</th><th class="num">Tổng mua</th><th>Tỷ trọng</th></tr></thead><tbody>
+<tr>
+<td><span class="dash-rank r1">1</span></td>
+<td><div class="dash-cust"><span class="dash-ava" style="background:#00a99d">NA</span><span><b>Nguyễn Văn An</b><small>Cầu Giấy, Hà Nội</small></span></div></td>
+
+<td class="num">2</td>
+<td class="num"><b>600.000đ</b></td>
+<td><div class="dash-share"><span class="dash-bar"><i style="width:100%;background:#00a99d"></i></span><em>23,4%</em></div></td>
+</tr>
+<tr>
+<td><span class="dash-rank r2">2</span></td>
+<td><div class="dash-cust"><span class="dash-ava" style="background:#1f4e8c">ĐL</span><span><b>Đặng Ngọc Lan</b><small>Quận 3, TP. Hồ Chí Minh</small></span></div></td>
+
+<td class="num">1</td>
+<td class="num"><b>490.000đ</b></td>
+<td><div class="dash-share"><span class="dash-bar"><i style="width:82%;background:#1f4e8c"></i></span><em>19,1%</em></div></td>
+</tr>
+<tr>
+<td><span class="dash-rank r3">3</span></td>
+<td><div class="dash-cust"><span class="dash-ava" style="background:#e0a21b">TB</span><span><b>Trần Thị Bình</b><small>Quận 1, TP. Hồ Chí Minh</small></span></div></td>
+
+<td class="num">1</td>
+<td class="num"><b>375.000đ</b></td>
+<td><div class="dash-share"><span class="dash-bar"><i style="width:62%;background:#e0a21b"></i></span><em>14,6%</em></div></td>
+</tr>
+<tr>
+<td><span class="dash-rank r4">4</span></td>
+<td><div class="dash-cust"><span class="dash-ava" style="background:#7c5cd6">PD</span><span><b>Phạm Quốc Dũng</b><small>Ngô Quyền, Hải Phòng</small></span></div></td>
+
+<td class="num">1</td>
+<td class="num"><b>330.000đ</b></td>
+<td><div class="dash-share"><span class="dash-bar"><i style="width:55%;background:#7c5cd6"></i></span><em>12,9%</em></div></td>
+</tr>
+<tr>
+<td><span class="dash-rank r5">5</span></td>
+<td><div class="dash-cust"><span class="dash-ava" style="background:#e5694d">LC</span><span><b>Lê Minh Châu</b><small>Hải Châu, Đà Nẵng</small></span></div></td>
+
+<td class="num">1</td>
+<td class="num"><b>278.000đ</b></td>
+<td><div class="dash-share"><span class="dash-bar"><i style="width:46%;background:#e5694d"></i></span><em>10,8%</em></div></td>
+</tr>
+</tbody><tfoot><tr><td colspan="3">Tổng top 5 (80,9% doanh thu)</td><td class="num">2.073.000đ</td><td></td></tr></tfoot></table></div></section>
+<aside class="adm-card dash-side"><div class="dash-ct"><h2>Cơ cấu doanh thu</h2></div>
+<div class="dash-donut" style="background:conic-gradient(#00a99d 0.00% 23.41%, #1f4e8c 23.41% 42.53%, #e0a21b 42.53% 57.16%, #7c5cd6 57.16% 70.04%, #e5694d 70.04% 80.88%, #cfd6dc 80.88% 100.00%)" role="img" aria-label="Biểu đồ cơ cấu doanh thu theo khách hàng"><div><small>Tổng</small><b>2.563.000đ</b></div></div>
+<ul class="dash-legend"><li><i style="background:#00a99d"></i><span>Nguyễn Văn An</span><b>23,4%</b></li><li><i style="background:#1f4e8c"></i><span>Đặng Ngọc Lan</span><b>19,1%</b></li><li><i style="background:#e0a21b"></i><span>Trần Thị Bình</span><b>14,6%</b></li><li><i style="background:#7c5cd6"></i><span>Phạm Quốc Dũng</span><b>12,9%</b></li><li><i style="background:#e5694d"></i><span>Lê Minh Châu</span><b>10,8%</b></li><li><i style="background:#cfd6dc"></i><span>Khách khác</span><b>19,1%</b></li></ul></aside>
+</div>
+<section class="adm-card dash-detail"><div class="dash-ct"><h2>Chi tiết đơn hàng theo khách</h2><span class="dash-tag">Bấm vào từng khách để xem / thu gọn</span></div>
+<details class="dash-acc" open>
+<summary><span class="dash-rank r1">1</span><span class="dash-acc-who"><b>Nguyễn Văn An</b><small>annguyen@example.com · 0901 234 567 · Cầu Giấy, Hà Nội</small></span><span class="dash-acc-n">2 đơn</span><span class="dash-acc-tot">600.000đ</span><svg class="dash-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+<div class="tbl-wrap"><table class="tbl dash-tbl"><thead><tr><th>Mã đơn</th><th>Ngày đặt</th><th>Số lượng</th><th class="num">Giá trị đơn</th><th></th></tr></thead><tbody><tr><td><a class="lnk" href="../don-hang/order-TP20260925-3.html"><b>TP20260925</b></a></td><td>25/09/2026 09:15</td><td>3 sản phẩm</td><td class="num">355.000đ</td><td class="acts"><a class="btn btn-out btn-sm" href="../don-hang/order-TP20260925-3.html">Xem chi tiết</a></td></tr><tr><td><a class="lnk" href="../don-hang/order-TP20260812-3.html"><b>TP20260812</b></a></td><td>12/08/2026 19:47</td><td>1 sản phẩm</td><td class="num">245.000đ</td><td class="acts"><a class="btn btn-out btn-sm" href="../don-hang/order-TP20260812-3.html">Xem chi tiết</a></td></tr></tbody><tfoot><tr><td colspan="3">Tổng mua (2 đơn)</td><td class="num">600.000đ</td><td></td></tr></tfoot></table></div>
+</details>
+<details class="dash-acc">
+<summary><span class="dash-rank r2">2</span><span class="dash-acc-who"><b>Đặng Ngọc Lan</b><small>lan.dang@example.com · 0977 890 123 · Quận 3, TP. Hồ Chí Minh</small></span><span class="dash-acc-n">1 đơn</span><span class="dash-acc-tot">490.000đ</span><svg class="dash-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+<div class="tbl-wrap"><table class="tbl dash-tbl"><thead><tr><th>Mã đơn</th><th>Ngày đặt</th><th>Số lượng</th><th class="num">Giá trị đơn</th><th></th></tr></thead><tbody><tr><td><a class="lnk" href="../don-hang/order-TP20260905-3.html"><b>TP20260905</b></a></td><td>05/09/2026 15:44</td><td>2 sản phẩm</td><td class="num">490.000đ</td><td class="acts"><a class="btn btn-out btn-sm" href="../don-hang/order-TP20260905-3.html">Xem chi tiết</a></td></tr></tbody><tfoot><tr><td colspan="3">Tổng mua (1 đơn)</td><td class="num">490.000đ</td><td></td></tr></tfoot></table></div>
+</details>
+<details class="dash-acc">
+<summary><span class="dash-rank r3">3</span><span class="dash-acc-who"><b>Trần Thị Bình</b><small>binh.tran@example.com · 0912 345 678 · Quận 1, TP. Hồ Chí Minh</small></span><span class="dash-acc-n">1 đơn</span><span class="dash-acc-tot">375.000đ</span><svg class="dash-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+<div class="tbl-wrap"><table class="tbl dash-tbl"><thead><tr><th>Mã đơn</th><th>Ngày đặt</th><th>Số lượng</th><th class="num">Giá trị đơn</th><th></th></tr></thead><tbody><tr><td><a class="lnk" href="../don-hang/order-TP20261003-3.html"><b>TP20261003</b></a></td><td>03/10/2026 10:12</td><td>3 sản phẩm</td><td class="num">375.000đ</td><td class="acts"><a class="btn btn-out btn-sm" href="../don-hang/order-TP20261003-3.html">Xem chi tiết</a></td></tr></tbody><tfoot><tr><td colspan="3">Tổng mua (1 đơn)</td><td class="num">375.000đ</td><td></td></tr></tfoot></table></div>
+</details>
+<details class="dash-acc">
+<summary><span class="dash-rank r4">4</span><span class="dash-acc-who"><b>Phạm Quốc Dũng</b><small>dung.pham@example.com · 0944 567 890 · Ngô Quyền, Hải Phòng</small></span><span class="dash-acc-n">1 đơn</span><span class="dash-acc-tot">330.000đ</span><svg class="dash-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+<div class="tbl-wrap"><table class="tbl dash-tbl"><thead><tr><th>Mã đơn</th><th>Ngày đặt</th><th>Số lượng</th><th class="num">Giá trị đơn</th><th></th></tr></thead><tbody><tr><td><a class="lnk" href="../don-hang/order-TP20260928-3.html"><b>TP20260928</b></a></td><td>28/09/2026 13:30</td><td>1 sản phẩm</td><td class="num">330.000đ</td><td class="acts"><a class="btn btn-out btn-sm" href="../don-hang/order-TP20260928-3.html">Xem chi tiết</a></td></tr></tbody><tfoot><tr><td colspan="3">Tổng mua (1 đơn)</td><td class="num">330.000đ</td><td></td></tr></tfoot></table></div>
+</details>
+<details class="dash-acc">
+<summary><span class="dash-rank r5">5</span><span class="dash-acc-who"><b>Lê Minh Châu</b><small>chau.le@example.com · 0933 456 789 · Hải Châu, Đà Nẵng</small></span><span class="dash-acc-n">1 đơn</span><span class="dash-acc-tot">278.000đ</span><svg class="dash-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+<div class="tbl-wrap"><table class="tbl dash-tbl"><thead><tr><th>Mã đơn</th><th>Ngày đặt</th><th>Số lượng</th><th class="num">Giá trị đơn</th><th></th></tr></thead><tbody><tr><td><a class="lnk" href="../don-hang/order-TP20260830-3.html"><b>TP20260830</b></a></td><td>30/08/2026 12:10</td><td>2 sản phẩm</td><td class="num">278.000đ</td><td class="acts"><a class="btn btn-out btn-sm" href="../don-hang/order-TP20260830-3.html">Xem chi tiết</a></td></tr></tbody><tfoot><tr><td colspan="3">Tổng mua (1 đơn)</td><td class="num">278.000đ</td><td></td></tr></tfoot></table></div>
+</details>
+</section>
+</div>
+</main>
+</div>
+</div>
+</body>
+</html>

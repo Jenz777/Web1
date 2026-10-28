@@ -1,0 +1,7 @@
+/* Ẩn sản phẩm trên cửa hàng (web tĩnh, chỉ HTML + CSS).
+   Khi admin "xoá" một sản phẩm ĐÃ BÁN RA thì sản phẩm chỉ bị ẩn: thêm một dòng cho id đó vào đây.
+   Ví dụ ẩn sản phẩm số 1 (Sổ tay bìa cứng A5 dòng kẻ) — bỏ dấu chú thích để bật:
+
+.product-card:has(a[href$="product-detail-1.html"]){display:none}
+
+   Muốn hiện lại: xoá hoặc chú thích dòng đó. Sản phẩm CHƯA bán thì xoá hẳn khối HTML của nó khỏi các trang. */

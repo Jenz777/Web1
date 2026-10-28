@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1" name="viewport" />
+  <title>Tìm kiếm | TTL Shop</title>
+      <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+  <link href="../../assets/css/ui-overrides.css" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/an-san-pham.css">
+</head>
+
+<body>
+  <!-- ===== Thanh thông báo trên cùng ===== -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <b> Miễn phí giao hàng cho đơn từ 300.000đ </b>
+      <div class="topbar-links">
+        <span> Thông báo sản phẩm mới mỗi tuần </span>
+        <a href="#contact"> Hỗ trợ: 1900 1234 </a>
+      </div>
+    </div>
+  </div>
+  <!-- ===== Header: logo, tìm kiếm, đăng nhập, giỏ hàng + menu ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="../../index.html">
+        <img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm">
+      </a>
+      <form action="tim-kiem.html#tab-co-ban" class="search">
+        <input name="q" placeholder="T&igrave;m sản phẩm..." type="search" />
+        <button type="submit"> Tìm </button>
+      </form>
+      <div class="header-actions">
+        <a class="account-link" href="../auth/login.html">
+          <span aria-hidden="true" class="account-icon"> </span>
+          <span> Tài khoản </span>
+        </a>
+        <a class="order-link" href="../mua-hang/kiem-tra-don-hang.html"> <span aria-hidden="true" class="order-icon"> </span> <span>
+            Kiểm tra đơn </span> </a>
+        <a class="cart-link" href="../mua-hang/cart.html">
+          <span aria-hidden="true" class="cart-icon"> </span>
+          <span> Giỏ hàng </span>
+          <span class="cart-badge">5</span>
+        </a>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="nav-link" href="../../index.html"> Trang chủ </a>
+        <a class="nav-link" href="../danh-muc/category-so-tay.html"> Sổ tay </a>
+        <a class="nav-link" href="../danh-muc/category-but-viet.html"> Bút viết </a>
+        <a class="nav-link" href="../danh-muc/category-giay-file.html"> Giấy &amp; File bìa </a>
+        <a class="nav-link" href="../danh-muc/category-do-dung-hoc-tap.html"> Đồ dùng học tập </a>
+        <a class="nav-link" href="../danh-muc/category-mau-hoa-cu.html"> Màu &amp; Họa cụ </a>
+        <a class="nav-link nav-hot" href="../danh-muc/top-ban-chay.html"> Bán chạy </a>
+        <a class="nav-link" href="../danh-gia.html"> Đánh giá </a>
+      </div>
+    </nav>
+  </header>
+  <!-- ===== Nội dung chính của trang ===== -->
+  <main class="search-page">
+    <div class="section-head" style="margin:0 0 8px">
+      <h2>Tìm kiếm &amp; lọc sản phẩm</h2>
+    </div>
+    <p style="color:var(--muted);margin:0 0 24px">Sử dụng bộ lọc để thu hẹp kết quả. Kết quả hiển thị theo từng danh
+      mục ngay dưới đây.</p>
+    <section id="tab-co-ban" class="filter-panel">
+      <form action="tim-kiem.html#ket-qua" class="filter-form" method="get">
+        <div class="filter-grid">
+          <div class="filter-field"><label for="q"> Tên sản phẩm </label> <input id="q" name="q"
+              placeholder="VD: sổ tay, b&uacute;t bi, m&agrave;u nước..." type="search" /></div>
+          <div class="filter-field">
+            <label for="cat"> Phân loại </label>
+            <select id="cat" name="cat">
+              <option value="">Tất cả danh mục</option>
+              <option value="so-tay">Sổ tay</option>
+              <option value="but-viet">Bút viết</option>
+              <option value="giay-file">Giấy &amp; File bìa</option>
+              <option value="do-dung-hoc-tap">Đồ dùng học tập</option>
+              <option value="mau-hoa-cu">Màu &amp; Họa cụ</option>
+            </select>
+          </div>
+          <div class="filter-field"><label for="pmin"> Giá tối thiểu (đ) </label> <input id="pmin" min="0" name="pmin"
+              placeholder="VD: 100000" step="1000" type="number" /></div>
+          <div class="filter-field"><label for="pmax"> Giá tối đa (đ) </label> <input id="pmax" min="0" name="pmax"
+              placeholder="VD: 500000" step="1000" type="number" /></div>
+          <div class="filter-field">
+            <label for="sort"> Sắp xếp </label>
+            <select id="sort" name="sort">
+              <option value="popular">Phổ biến</option>
+              <option value="price-asc">Giá thấp → cao</option>
+              <option value="price-desc">Giá cao → thấp</option>
+              <option value="newest">Mới nhất</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-actions"><button class="btn btn-primary" type="submit"> Tìm kiếm </button> <a
+            class="btn btn-ghost" href="tim-kiem.html"> Xóa lọc </a></div>
+      </form>
+    </section>
+    <section class="quick-search">
+      <h3 class="quick-search-title">Tìm kiếm nhanh</h3>
+      <div class="quick-search-chips"><a class="qs-chip qs-st" href="tim-kiem-sotay.html">Sổ tay</a><a
+          class="qs-chip qs-bv" href="tim-kiem-butviet.html">Bút viết</a><a class="qs-chip qs-gf"
+          href="tim-kiem-giay.html">Giấy
+          &amp; File bìa</a><a class="qs-chip qs-dh" href="tim-kiem-dungcu.html">Đồ dùng học tập</a><a
+          class="qs-chip qs-mh" href="tim-kiem-mau.html">Màu &amp; Họa cụ</a></div>
+    </section>
+    <div id="ket-qua"></div>
+    <section id="ket-qua" class="search-results">
+      <h3 class="results-heading"><span class="results-label"></span><span class="results-count">60 sản phẩm tìm
+          thấy</span>
+        <p></p>
+      </h3>
+      <div class="rs-group rs-all">
+        <div class="filter-cat-head">
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-media">
+              <a href="../san-pham/product-detail-1.html">
+                <img
+                  src="../../assets/images/so-tay-bia-cung-a5.jpg"
+                  alt="Sổ tay bìa cứng A5 dòng kẻ">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Moleskine</span>
+              <h3 class="product-name">Sổ tay bìa cứng A5 dòng kẻ</h3>
+            </div>
+            <div class="product-foot">
+              <div class="product-rating">★★★★★ <span>(128)</span></div>
+              <div class="price">
+                <span class="price-now">180.000đ</span>
+              </div>
+              <div class="product-actions">
+                <label class="btn btn-primary btn-sm" for="atc-1" role="button">Thêm vào giỏ</label>
+                <a class="btn btn-secondary btn-sm" href="../mua-hang/cart.html">Mua ngay</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media">
+              <a href="../san-pham/product-detail-2.html">
+                <img
+                  src="../../assets/images/but-bi-12-mau-0-7mm.jpg"
+                  alt="Hộp 12 bút bi nhiều màu 0.7mm">
+              </a>
+              <span class="badge badge-new">Mới</span>
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Pentel</span>
+              <h3 class="product-name">Hộp 12 bút bi nhiều màu 0.7mm</h3>
+            </div>
+            <div class="product-foot">
+              <div class="product-rating">★★★★★ <span>(64)</span></div>
+              <div class="price">
+                <span class="price-now">95.000đ</span>
+              </div>
+              <div class="product-actions">
+                <label class="btn btn-primary btn-sm" for="atc-2" role="button">Thêm vào giỏ</label>
+                <a class="btn btn-secondary btn-sm" href="../mua-hang/cart.html">Mua ngay</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media">
+              <a href="../san-pham/product-detail-3.html">
+                <img
+                  src="../../assets/images/set-dung-cu-hoc-tap-6-mon.jpg"
+                  alt="Set dụng cụ học tập 6 món giá treo">
+              </a>
+              <span class="badge badge-hot">Hot</span>
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Deli</span>
+              <h3 class="product-name">Set dụng cụ học tập 6 món giá treo</h3>
+            </div>
+            <div class="product-foot">
+              <div class="product-rating">★★★★★ <span>(312)</span></div>
+              <div class="price">
+                <span class="price-now">245.000đ</span>
+              </div>
+              <div class="product-actions">
+                <label class="btn btn-primary btn-sm" for="atc-3" role="button">Thêm vào giỏ</label>
+                <a class="btn btn-secondary btn-sm" href="../mua-hang/cart.html">Mua ngay</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media">
+              <a href="../san-pham/product-detail-1.html">
+                <img
+                  src="../../assets/images/so-journal-a6-dot-pastel.jpg"
+                  alt="Sổ journal A6 chấm dot pastel">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Leuchtturm</span>
+              <h3 class="product-name">Sổ journal A6 chấm dot pastel</h3>
+            </div>
+            <div class="product-foot">
+              <div class="product-rating">★★★★★ <span>(87)</span></div>
+              <div class="price">
+                <span class="price-now">165.000đ</span>
+              </div>
+              <div class="product-actions">
+                <label class="btn btn-primary btn-sm" for="atc-4" role="button">Thêm vào giỏ</label>
+                <a class="btn btn-secondary btn-sm" href="../mua-hang/cart.html">Mua ngay</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media">
+              <a href="../san-pham/product-detail-5.html">
+                <img
+                  src="../../assets/images/chi-mau-wooden-48.jpg"
+                  alt="Hộp 48 bút chì màu wooden">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Faber-Castell</span>
+              <h3 class="product-name">Hộp 48 bút chì màu wooden</h3>
+            </div>
+            <div class="product-foot">
+              <div class="product-rating">★★★★★ <span>(209)</span></div>
+              <div class="price">
+                <span class="price-now">330.000đ</span>
+              </div>
+              <div class="product-actions">
+                <label class="btn btn-primary btn-sm" for="atc-5" role="button">Thêm vào giỏ</label>
+                <a class="btn btn-secondary btn-sm" href="../mua-hang/cart.html">Mua ngay</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media">
+              <a href="../san-pham/product-detail-1.html">
+                <img
+                  src="../../assets/images/hop-qua-van-phong-pham-10-mon.jpg"
+                  alt="Hộp quà set văn phòng phẩm 10 món">
+              </a>
+              <span class="badge badge-new">Mới</span>
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Cốc Cốc Stationery</span>
+              <h3 class="product-name">Hộp quà set văn phòng phẩm 10 món</h3>
+            </div>
+            <div class="product-foot">
+              <div class="product-rating">★★★★★ <span>(42)</span></div>
+              <div class="price">
+                <span class="price-now">399.000đ</span>
+              </div>
+              <div class="product-actions">
+                <label class="btn btn-primary btn-sm" for="atc-6" role="button">Thêm vào giỏ</label>
+                <a class="btn btn-secondary btn-sm" href="../mua-hang/cart.html">Mua ngay</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media">
+              <a href="../san-pham/product-detail-1.html">
+                <img
+                  src="../../assets/images/so-tay-hoa-trang-a5.jpg"
+                  alt="Sổ tay hoa trang A5 nút cài">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Paperblanks</span>
+              <h3 class="product-name">Sổ tay hoa trang A5 nút cài</h3>
+            </div>
+            <div class="product-foot">
+              <div class="product-rating">★★★★★ <span>(56)</span></div>
+              <div class="price">
+                <span class="price-now">210.000đ</span>
+              </div>
+              <div class="product-actions">
+                <label class="btn btn-primary btn-sm" for="atc-7" role="button">Thêm vào giỏ</label>
+                <a class="btn btn-secondary btn-sm" href="../mua-hang/cart.html">Mua ngay</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media">
+              <a href="../san-pham/product-detail-5.html">
+                <img
+                  src="../../assets/images/chi-mau-noris-36.jpg"
+                  alt="Hộp 36 bút chì màu Noris">
+              </a>
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Staedtler</span>
+              <h3 class="product-name">Hộp 36 bút chì màu Noris</h3>
+            </div>
+            <div class="product-foot">
+              <div class="product-rating">★★★★★ <span>(178)</span></div>
+              <div class="price">
+                <span class="price-now">225.000đ</span>
+              </div>
+              <div class="product-actions">
+                <label class="btn btn-primary btn-sm" for="atc-8" role="button">Thêm vào giỏ</label>
+                <a class="btn btn-secondary btn-sm" href="../mua-hang/cart.html">Mua ngay</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="cat-pagination"><a href="#" class="cat-pag-active">1</a><a href="../danh-muc/category-mau-hoa-cu.html">2</a><a
+            href="../danh-muc/category-mau-hoa-cu.html">3</a><a href="../danh-muc/category-mau-hoa-cu.html">→</a></div>
+      </div>
+    </section>
+  </main>
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo logo-footer">
+          <img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm">
+        </div>
+        <p class="footer-branch"><b>Chi nhánh Hà Nội:</b> 260 Lê Trọng Tấn, Thanh Xuân, Hà Nội</p><p class="footer-branch"><b>Chi nhánh TP. Hồ Chí Minh:</b> 273 An Dương Vương, Phường Chợ Quán, TP. Hồ Chí Minh</p><p>1900 1234 — hotro@ttlshop.vn</p>
+      </div>
+      <div class="footer-col">
+        <h4>Về chúng tôi</h4>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Thông tin liên hệ</a>
+        <a href="#">Chính sách bảo mật thông tin cá nhân</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hỗ trợ khách hàng</h4>
+        <a href="#">Hướng dẫn mua hàng</a>
+        <a href="#">Hướng dẫn thanh toán</a>
+        <a href="#">Chính sách giao hàng</a>
+        <a href="#">Chính sách đổi trả &amp; hoàn tiền</a>
+        <a href="#">Thông tin liên hệ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Thanh toán</h4>
+        <div class="pay-methods"><span class="pay-item"> <span aria-hidden="true" class="pay-ico pay-visa"> </span>
+            Visa </span> <span class="pay-item"> <span aria-hidden="true" class="pay-ico pay-visa"> </span> Mastercard
+          </span> <span class="pay-item"> <span aria-hidden="true" class="pay-ico pay-bank"> </span> Ngân hàng </span>
+          <span class="pay-item"> <span aria-hidden="true" class="pay-ico pay-momo"> </span> Momo </span> <span
+            class="pay-item"> <span aria-hidden="true" class="pay-ico pay-zalo"> </span> ZaloPay </span> <span
+            class="pay-item"> <span aria-hidden="true" class="pay-ico pay-cod"> </span> COD </span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 TTL Shop. Mọi quyền được bảo lưu.</div>
+  </footer>
+<!-- Popup thông báo thêm vào giỏ (CSS-only: checkbox ẩn + label) -->
+<input type="checkbox" id="atc-1" class="atc-toggle" aria-hidden="true" tabindex="-1">
+<div class="atc-modal" role="alertdialog" aria-label="Thông báo">
+  <label class="atc-backdrop" for="atc-1"></label>
+  <div class="atc-box">
+    <div class="success-icon" aria-hidden="true"></div>
+    <h3>Đã thêm vào giỏ hàng thành công!</h3>
+    <p>Sản phẩm đã được thêm vào giỏ hàng của bạn.</p>
+    <div class="success-actions">
+      <a class="btn btn-primary btn-sm" href="../mua-hang/cart.html">Xem giỏ hàng</a>
+      <label class="btn btn-secondary btn-sm" for="atc-1">Tiếp tục mua sắm</label>
+    </div>
+  </div>
+</div>
+<!-- Popup thông báo thêm vào giỏ (CSS-only: checkbox ẩn + label) -->
+<input type="checkbox" id="atc-2" class="atc-toggle" aria-hidden="true" tabindex="-1">
+<div class="atc-modal" role="alertdialog" aria-label="Thông báo">
+  <label class="atc-backdrop" for="atc-2"></label>
+  <div class="atc-box">
+    <div class="success-icon" aria-hidden="true"></div>
+    <h3>Đã thêm vào giỏ hàng thành công!</h3>
+    <p>Sản phẩm đã được thêm vào giỏ hàng của bạn.</p>
+    <div class="success-actions">
+      <a class="btn btn-primary btn-sm" href="../mua-hang/cart.html">Xem giỏ hàng</a>
+      <label class="btn btn-secondary btn-sm" for="atc-2">Tiếp tục mua sắm</label>
+    </div>
+  </div>
+</div>
+<!-- Popup thông báo thêm vào giỏ (CSS-only: checkbox ẩn + label) -->
+<input type="checkbox" id="atc-3" class="atc-toggle" aria-hidden="true" tabindex="-1">
+<div class="atc-modal" role="alertdialog" aria-label="Thông báo">
+  <label class="atc-backdrop" for="atc-3"></label>
+  <div class="atc-box">
+    <div class="success-icon" aria-hidden="true"></div>
+    <h3>Đã thêm vào giỏ hàng thành công!</h3>
+    <p>Sản phẩm đã được thêm vào giỏ hàng của bạn.</p>
+    <div class="success-actions">
+      <a class="btn btn-primary btn-sm" href="../mua-hang/cart.html">Xem giỏ hàng</a>
+      <label class="btn btn-secondary btn-sm" for="atc-3">Tiếp tục mua sắm</label>
+    </div>
+  </div>
+</div>
+<!-- Popup thông báo thêm vào giỏ (CSS-only: checkbox ẩn + label) -->
+<input type="checkbox" id="atc-4" class="atc-toggle" aria-hidden="true" tabindex="-1">
+<div class="atc-modal" role="alertdialog" aria-label="Thông báo">
+  <label class="atc-backdrop" for="atc-4"></label>
+  <div class="atc-box">
+    <div class="success-icon" aria-hidden="true"></div>
+    <h3>Đã thêm vào giỏ hàng thành công!</h3>
+    <p>Sản phẩm đã được thêm vào giỏ hàng của bạn.</p>
+    <div class="success-actions">
+      <a class="btn btn-primary btn-sm" href="../mua-hang/cart.html">Xem giỏ hàng</a>
+      <label class="btn btn-secondary btn-sm" for="atc-4">Tiếp tục mua sắm</label>
+    </div>
+  </div>
+</div>
+<!-- Popup thông báo thêm vào giỏ (CSS-only: checkbox ẩn + label) -->
+<input type="checkbox" id="atc-5" class="atc-toggle" aria-hidden="true" tabindex="-1">
+<div class="atc-modal" role="alertdialog" aria-label="Thông báo">
+  <label class="atc-backdrop" for="atc-5"></label>
+  <div class="atc-box">
+    <div class="success-icon" aria-hidden="true"></div>
+    <h3>Đã thêm vào giỏ hàng thành công!</h3>
+    <p>Sản phẩm đã được thêm vào giỏ hàng của bạn.</p>
+    <div class="success-actions">
+      <a class="btn btn-primary btn-sm" href="../mua-hang/cart.html">Xem giỏ hàng</a>
+      <label class="btn btn-secondary btn-sm" for="atc-5">Tiếp tục mua sắm</label>
+    </div>
+  </div>
+</div>
+<!-- Popup thông báo thêm vào giỏ (CSS-only: checkbox ẩn + label) -->
+<input type="checkbox" id="atc-6" class="atc-toggle" aria-hidden="true" tabindex="-1">
+<div class="atc-modal" role="alertdialog" aria-label="Thông báo">
+  <label class="atc-backdrop" for="atc-6"></label>
+  <div class="atc-box">
+    <div class="success-icon" aria-hidden="true"></div>
+    <h3>Đã thêm vào giỏ hàng thành công!</h3>
+    <p>Sản phẩm đã được thêm vào giỏ hàng của bạn.</p>
+    <div class="success-actions">
+      <a class="btn btn-primary btn-sm" href="../mua-hang/cart.html">Xem giỏ hàng</a>
+      <label class="btn btn-secondary btn-sm" for="atc-6">Tiếp tục mua sắm</label>
+    </div>
+  </div>
+</div>
+<!-- Popup thông báo thêm vào giỏ (CSS-only: checkbox ẩn + label) -->
+<input type="checkbox" id="atc-7" class="atc-toggle" aria-hidden="true" tabindex="-1">
+<div class="atc-modal" role="alertdialog" aria-label="Thông báo">
+  <label class="atc-backdrop" for="atc-7"></label>
+  <div class="atc-box">
+    <div class="success-icon" aria-hidden="true"></div>
+    <h3>Đã thêm vào giỏ hàng thành công!</h3>
+    <p>Sản phẩm đã được thêm vào giỏ hàng của bạn.</p>
+    <div class="success-actions">
+      <a class="btn btn-primary btn-sm" href="../mua-hang/cart.html">Xem giỏ hàng</a>
+      <label class="btn btn-secondary btn-sm" for="atc-7">Tiếp tục mua sắm</label>
+    </div>
+  </div>
+</div>
+<!-- Popup thông báo thêm vào giỏ (CSS-only: checkbox ẩn + label) -->
+<input type="checkbox" id="atc-8" class="atc-toggle" aria-hidden="true" tabindex="-1">
+<div class="atc-modal" role="alertdialog" aria-label="Thông báo">
+  <label class="atc-backdrop" for="atc-8"></label>
+  <div class="atc-box">
+    <div class="success-icon" aria-hidden="true"></div>
+    <h3>Đã thêm vào giỏ hàng thành công!</h3>
+    <p>Sản phẩm đã được thêm vào giỏ hàng của bạn.</p>
+    <div class="success-actions">
+      <a class="btn btn-primary btn-sm" href="../mua-hang/cart.html">Xem giỏ hàng</a>
+      <label class="btn btn-secondary btn-sm" for="atc-8">Tiếp tục mua sắm</label>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

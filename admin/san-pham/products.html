@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quản lý sản phẩm | TTL Shop Admin</title>
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body class="adm">
+  <input type="checkbox" id="nav-t" class="nav-t" aria-hidden="true" tabindex="-1">
+  <div class="adm-shell">
+    <aside class="adm-side">
+      <a class="adm-brand" href="../index.html"><span class="logo-mark"><img src="../../assets/images/logo-icon.png" alt="TTL Shop"></span><span>TTL Shop<small>Quản trị hệ
+            thống</small></span></a>
+      <div class="adm-sec">Quản lý</div>
+      <nav aria-label="Menu quản trị"><a href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+            <rect x="14" y="14" width="7" height="7" rx="1" />
+          </svg>Tổng quan</a><a href="products.html" class="on" aria-current="page"><svg viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path d="M21 8l-9-5-9 5v8l9 5 9-5z" />
+            <path d="M3 8l9 5 9-5M12 13v8" />
+          </svg>Sản phẩm</a><a href="../don-hang/orders.html"><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 3h12v18l-3-2-3 2-3-2-3 2z" />
+            <path d="M9 8h6M9 12h6" />
+          </svg>Đơn hàng</a><a href="../thong-ke/stats.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Thống kê</a><a href="../khach-hang/users.html"><svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="9" cy="8" r="3.5" />
+            <path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5" />
+            <path d="M16 4.6a3.5 3.5 0 010 6.8M18.5 14.8c1.7.7 2.7 2.3 3 4.7" />
+          </svg>Khách hàng</a><a href="../quan-tri-vien/admins.html"><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z" />
+            <path d="M9 12l2.2 2.2L15.5 10" />
+          </svg>Quản trị viên</a></nav>
+      <div class="adm-me">
+        <div class="adm-me-row"><span class="adm-avatar" aria-hidden="true">Q</span><span><b>Quản trị
+              viên</b><small>Quản trị cấp cao</small></span></div><a class="btn btn-sm" href="../logout.html">Đăng xuất</a>
+      </div>
+    </aside>
+    <label class="adm-back" for="nav-t" aria-hidden="true"></label>
+    <div class="adm-main">
+      <header class="adm-top"><label class="adm-burger" for="nav-t" aria-label="Mở menu">☰</label>
+        <p class="crumb">Quản trị › <b>Quản lý sản phẩm</b></p><a class="btn btn-out btn-sm" href="../../index.html"
+          target="_blank">Xem cửa hàng ↗</a>
+      </header>
+      <main class="adm-wrap">
+        <div class="adm-head">
+          <div>
+            <h1>Quản lý sản phẩm</h1>
+            <p>Xoá sản phẩm chưa bán; sản phẩm đã bán ra sẽ được ẩn khỏi website.</p>
+          </div>
+          <div><a class="btn btn-pri" href="product-add.html">+ Thêm sản phẩm</a></div>
+        </div>
+        <div class="adm-content">
+          <p class="notice"><b>Quy tắc xoá:</b> sản phẩm <b>đã có đơn bán r
+              a</b> → bấm Xoá chỉ <b>ẩn khỏi web</b> (có nút Hiện lại). Sản phẩm <b>chưa bán</b> → hệ thống hỏi xác nhận
+            rồi xoá hẳn. Trang tĩnh không có cơ sở dữ liệu nên thao tác chỉ minh hoạ trên trang này và không lưu sau khi
+            tải lại.</p>
+          <section class="adm-card"><input type="radio" name="pc" id="pc-0" class="hist-radio" checked><input
+              type="radio" name="pc" id="pc-1" class="hist-radio"><input type="radio" name="pc" id="pc-2"
+              class="hist-radio"><input type="radio" name="pc" id="pc-3" class="hist-radio"><input type="radio"
+              name="pc" id="pc-4" class="hist-radio"><input type="radio" name="pc" id="pc-5" class="hist-radio">
+            <div class="tabs"><label for="pc-0">Tất cả (60)</label><label for="pc-1">Sổ tay (12)</label><label
+                for="pc-2">Bút viết (12)</label><label for="pc-3">Đồ dùng học tập (12)</label><label for="pc-4">Giấy
+                &amp;
+                File bìa (12)</label><label for="pc-5">Màu &amp; Họa cụ (12)</label></div>
+            <div class="tbl-wrap">
+              <table class="tbl tbl-lg">
+                <thead>
+                  <tr>
+                    <th>Ảnh</th>
+                    <th>Sản phẩm</th>
+                    <th>Phân loại</th>
+                    <th>Giá</th>
+                    <th>Kho</th>
+                    <th>Đã bán</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="c3 pa1">
+                    <td><input type="checkbox" id="x-3" class="tg tg-hide" aria-hidden="true" tabindex="-1"><img
+                        class="thumb"
+                        src="../../assets/images/set-dung-cu-hoc-tap-6-mon.jpg"
+                        alt="Set dụng cụ học tập 6 món giá treo" loading="lazy"></td>
+                    <td><b>Set dụng cụ học tập 6 món giá treo</b><span class="sub">TTL-DC-003 · Deli</span></td>
+                    <td><span class="badge b-user">Đồ dùng học tập</span></td>
+                    <td class="num">245.000đ</td>
+                    <td><span class="badge b-ok">Còn 35</span></td>
+                    <td><b>1</b><span class="sub">1 đơn</span></td>
+                    <td><span class="badge b-ok st-on">Đang bán</span><span class="badge b-gray st-off">Đã ẩn</span></td>
+                    <td class="acts"><a class="btn btn-out btn-sm" href="product-edit-3.html">Sửa</a><label
+                        class="btn btn-danger btn-sm" for="x-3" role="button"
+                        title="Đã bán 1 đơn: Xoá sẽ chỉ ẩn khỏi website"><span class="t-a">Xoá</span><span
+                          class="t-b">Hiện lại</span></label></td>
+                  </tr>
+                  <tr class="c5 pa1">
+                    <td><input type="checkbox" id="x-5" class="tg tg-del" aria-hidden="true" tabindex="-1"><img
+                        class="thumb"
+                        src="../../assets/images/chi-mau-wooden-48.jpg"
+                        alt="Hộp 48 bút chì màu wooden" loading="lazy"></td>
+                    <td><b>Hộp 48 bút chì màu wooden</b><span class="sub">TTL-MH-005 · Faber-Castell</span></td>
+                    <td><span class="badge b-user">Màu &amp; Họa cụ</span></td>
+                    <td class="num">330.000đ</td>
+                    <td><span class="badge b-ok">Còn 22</span></td>
+                    <td><span class="muted">Chưa bán</span></td>
+                    <td><span class="badge b-ok st-on">Đang bán</span><span class="badge b-gray st-off">Đã ẩn</span></td>
+                    <td class="acts"><a class="btn btn-out btn-sm" href="product-edit-5.html">Sửa</a><label
+                        class="btn btn-danger btn-sm" for="cf-5" role="button">Xoá</label><input type="checkbox"
+                        id="cf-5" class="mchk" aria-hidden="true" tabindex="-1">
+                      <div class="modal" role="dialog" aria-label="Xoá sản phẩm?">
+                        <div class="modal-box">
+                          <div class="modal-ic">!</div>
+                          <h3>Xoá sản phẩm?</h3>
+                          <p>Sản phẩm <b>Hộp 48 bút chì màu wooden</b> (TTL-MH-005) chưa được bán lần nào. Bạn có chắc
+                            muốn xoá hẳn? Thao tác này không thể hoàn tác.</p>
+                          <div class="modal-act"><label class="btn btn-out" for="cf-5">Huỷ</label><label
+                              class="btn btn-dng-fill" for="x-5">Xoá sản phẩm</label></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="c1 pa1">
+                    <td><input type="checkbox" id="x-6" class="tg tg-del" aria-hidden="true" tabindex="-1"><img
+                        class="thumb"
+                        src="../../assets/images/hop-qua-van-phong-pham-10-mon.jpg"
+                        alt="Hộp quà set văn phòng phẩm 10 món" loading="lazy"></td>
+                    <td><b>Hộp quà set văn phòng phẩm 10 món</b><span class="sub">TTL-ST-006 · Cốc Cốc Stationery</span>
+                    </td>
+                    <td><span class="badge b-user">Sổ tay</span></td>
+                    <td class="num">399.000đ</td>
+                    <td><span class="badge b-warn">Còn 9</span></td>
+                    <td><span class="muted">Chưa bán</span></td>
+                    <td><span class="badge b-ok st-on">Đang bán</span><span class="badge b-gray st-off">Đã ẩn</span></td>
+                    <td class="acts"><a class="btn btn-out btn-sm" href="product-edit-6.html">Sửa</a><label
+                        class="btn btn-danger btn-sm" for="cf-6" role="button">Xoá</label><input type="checkbox"
+                        id="cf-6" class="mchk" aria-hidden="true" tabindex="-1">
+                      <div class="modal" role="dialog" aria-label="Xoá sản phẩm?">
+                        <div class="modal-box">
+                          <div class="modal-ic">!</div>
+                          <h3>Xoá sản phẩm?</h3>
+                          <p>Sản phẩm <b>Hộp quà set văn phòng phẩm 10 món</b> (TTL-ST-006) chưa được bán lần nào. Bạn
+                            có chắc muốn xoá hẳn? Thao tác này không thể hoàn tác.</p>
+                          <div class="modal-act"><label class="btn btn-out" for="cf-6">Huỷ</label><label
+                              class="btn btn-dng-fill" for="x-6">Xoá sản phẩm</label></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="c5 pa1">
+                    <td><input type="checkbox" id="x-8" class="tg tg-del" aria-hidden="true" tabindex="-1"><img
+                        class="thumb"
+                        src="../../assets/images/chi-mau-noris-36.jpg"
+                        alt="Hộp 36 bút chì màu Noris" loading="lazy"></td>
+                    <td><b>Hộp 36 bút chì màu Noris</b><span class="sub">TTL-MH-008 · Staedtler</span></td>
+                    <td><span class="badge b-user">Màu &amp; Họa cụ</span></td>
+                    <td class="num">225.000đ</td>
+                    <td><span class="badge b-ok">Còn 30</span></td>
+                    <td><span class="muted">Chưa bán</span></td>
+                    <td><span class="badge b-ok st-on">Đang bán</span><span class="badge b-gray st-off">Đã ẩn</span></td>
+                    <td class="acts"><a class="btn btn-out btn-sm" href="product-edit-5.html">Sửa</a><label
+                        class="btn btn-danger btn-sm" for="cf-8" role="button">Xoá</label><input type="checkbox"
+                        id="cf-8" class="mchk" aria-hidden="true" tabindex="-1">
+                      <div class="modal" role="dialog" aria-label="Xoá sản phẩm?">
+                        <div class="modal-box">
+                          <div class="modal-ic">!</div>
+                          <h3>Xoá sản phẩm?</h3>
+                          <p>Sản phẩm <b>Hộp 36 bút chì màu Noris</b> (TTL-MH-008) chưa được bán lần nào. Bạn có chắc
+                            muốn xoá hẳn? Thao tác này không thể hoàn tác.</p>
+                          <div class="modal-act"><label class="btn btn-out" for="cf-8">Huỷ</label><label
+                              class="btn btn-dng-fill" for="x-8">Xoá sản phẩm</label></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="c1 pa2">
+                    <td><input type="checkbox" id="x-9" class="tg tg-del" aria-hidden="true" tabindex="-1"><img
+                        class="thumb"
+                        src="../../assets/images/so-tay-hoan-ky-a6.jpg"
+                        alt="Sổ tay hoàn kỷ A6 bìa mềm" loading="lazy"></td>
+                    <td><b>Sổ tay hoàn kỷ A6 bìa mềm</b><span class="sub">TTL-ST-009 · Moleskine</span></td>
+                    <td><span class="badge b-user">Sổ tay</span></td>
+                    <td class="num">125.000đ</td>
+                    <td><span class="badge b-ok">Còn 75</span></td>
+                    <td><span class="muted">Chưa bán</span></td>
+                    <td><span class="badge b-ok st-on">Đang bán</span><span class="badge b-gray st-off">Đã ẩn</span></td>
+                    <td class="acts"><a class="btn btn-out btn-sm" href="product-edit-6.html">Sửa</a><label
+                        class="btn btn-danger btn-sm" for="cf-9" role="button">Xoá</label><input type="checkbox"
+                        id="cf-9" class="mchk" aria-hidden="true" tabindex="-1">
+                      <div class="modal" role="dialog" aria-label="Xoá sản phẩm?">
+                        <div class="modal-box">
+                          <div class="modal-ic">!</div>
+                          <h3>Xoá sản phẩm?</h3>
+                          <p>Sản phẩm <b>Sổ tay hoàn kỷ A6 bìa mềm</b> (TTL-ST-009) chưa được bán lần nào. Bạn có chắc
+                            muốn xoá hẳn? Thao tác này không thể hoàn tác.</p>
+                          <div class="modal-act"><label class="btn btn-out" for="cf-9">Huỷ</label><label
+                              class="btn btn-dng-fill" for="x-9">Xoá sản phẩm</label></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="c2 pa2">
+                    <td><input type="checkbox" id="x-11" class="tg tg-hide" aria-hidden="true" tabindex="-1"><img
+                        class="thumb"
+                        src="../../assets/images/but-fineliner-24-mau.jpg"
+                        alt="Bút fineliner 24 màu" loading="lazy"></td>
+                    <td><b>Bút fineliner 24 màu</b><span class="sub">TTL-BV-011 · Sakura</span></td>
+                    <td><span class="badge b-user">Bút viết</span></td>
+                    <td class="num">235.000đ</td>
+                    <td><span class="badge b-ok">Còn 64</span></td>
+                    <td><b>1</b><span class="sub">1 đơn</span></td>
+                    <td><span class="badge b-ok st-on">Đang bán</span><span class="badge b-gray st-off">Đã ẩn</span></td>
+                    <td class="acts"><a class="btn btn-out btn-sm" href="product-edit-11.html">Sửa</a><label
+                        class="btn btn-danger btn-sm" for="x-11" role="button"
+                        title="Đã bán 1 đơn: Xoá sẽ chỉ ẩn khỏi website"><span class="t-a">Xoá</span><span
+                          class="t-b">Hiện lại</span></label></td>
+                  </tr>
+                  <tr class="c2 pa2">
+                    <td><input type="checkbox" id="x-12" class="tg tg-del" aria-hidden="true" tabindex="-1"><img
+                        class="thumb"
+                        src="../../assets/images/but-ky-danh-safari.jpg"
+                        alt="Bút ký danh cao cấp Safari" loading="lazy"></td>
+                    <td><b>Bút ký danh cao cấp Safari</b><span class="sub">TTL-BV-012 · Lamy</span></td>
+                    <td><span class="badge b-user">Bút viết</span></td>
+                    <td class="num">389.000đ</td>
+                    <td><span class="badge b-ok">Còn 18</span></td>
+                    <td><span class="muted">Chưa bán</span></td>
+                    <td><span class="badge b-ok st-on">Đang bán</span><span class="badge b-gray st-off">Đã ẩn</span></td>
+                    <td class="acts"><a class="btn btn-out btn-sm" href="product-edit-11.html">Sửa</a><label
+                        class="btn btn-danger btn-sm" for="cf-12" role="button">Xoá</label><input type="checkbox"
+                        id="cf-12" class="mchk" aria-hidden="true" tabindex="-1">
+                      <div class="modal" role="dialog" aria-label="Xoá sản phẩm?">
+                        <div class="modal-box">
+                          <div class="modal-ic">!</div>
+                          <h3>Xoá sản phẩm?</h3>
+                          <p>Sản phẩm <b>Bút ký danh cao cấp Safari</b> (TTL-BV-012) chưa được bán lần nào. Bạn có chắc
+                            muốn xoá hẳn? Thao tác này không thể hoàn tác.</p>
+                          <div class="modal-act"><label class="btn btn-out" for="cf-12">Huỷ</label><label
+                              class="btn btn-dng-fill" for="x-12">Xoá sản phẩm</label></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="c4 pa2">
+                    <td><input type="checkbox" id="x-13" class="tg tg-hide" aria-hidden="true" tabindex="-1"><img
+                        class="thumb"
+                        src="../../assets/images/giay-note-sticky-5-mau.jpg"
+                        alt="Giấy note sticky 5 màu (12 gói)" loading="lazy"></td>
+                    <td><b>Giấy note sticky 5 màu (12 gói)</b><span class="sub">TTL-GF-013 · 3M Post-it</span></td>
+                    <td><span class="badge b-user">Giấy &amp; File bìa</span></td>
+                    <td class="num">85.000đ</td>
+                    <td><span class="badge b-ok">Còn 200</span></td>
+                    <td><b>2</b><span class="sub">1 đơn</span></td>
+                    <td><span class="badge b-ok st-on">Đang bán</span><span class="badge b-gray st-off">Đã ẩn</span></td>
+                    <td class="acts"><a class="btn btn-out btn-sm" href="product-edit-13.html">Sửa</a><label
+                        class="btn btn-danger btn-sm" for="x-13" role="button"
+                        title="Đã bán 1 đơn: Xoá sẽ chỉ ẩn khỏi website"><span class="t-a">Xoá</span><span
+                          class="t-b">Hiện lại</span></label></td>
+                  </tr>
+                  <tr class="c4 pa2">
+                    <td><input type="checkbox" id="x-14" class="tg tg-del" aria-hidden="true" tabindex="-1"><img
+                        class="thumb"
+                        src="../../assets/images/file-bia-ho-so-a4-10-cai.jpg"
+                        alt="Bộ file bìa hồ sơ A4 10 cái" loading="lazy"></td>
+                    <td><b>Bộ file bìa hồ sơ A4 10 cái</b><span class="sub">TTL-GF-014 · Deli</span></td>
+                    <td><span class="badge b-user">Giấy &amp; File bìa</span></td>
+                    <td class="num">139.000đ</td>
+                    <td><span class="badge b-ok">Còn 55</span></td>
+                    <td><span class="muted">Chưa bán</span></td>
+                    <td><span class="badge b-ok st-on">Đang bán</span><span class="badge b-gray st-off">Đã ẩn</span></td>
+                    <td class="acts"><a class="btn btn-out btn-sm" href="product-edit-13.html">Sửa</a><label
+                        class="btn btn-danger btn-sm" for="cf-14" role="button">Xoá</label><input type="checkbox"
+                        id="cf-14" class="mchk" aria-hidden="true" tabindex="-1">
+                      <div class="modal" role="dialog" aria-label="Xoá sản phẩm?">
+                        <div class="modal-box">
+                          <div class="modal-ic">!</div>
+                          <h3>Xoá sản phẩm?</h3>
+                          <p>Sản phẩm <b>Bộ file bìa hồ sơ A4 10 cái</b> (TTL-GF-014) chưa được bán lần nào. Bạn có chắc
+                            muốn xoá hẳn? Thao tác này không thể hoàn tác.</p>
+                          <div class="modal-act"><label class="btn btn-out" for="cf-14">Huỷ</label><label
+                              class="btn btn-dng-fill" for="x-14">Xoá sản phẩm</label></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="c3 pa3">
+                    <td><input type="checkbox" id="x-18" class="tg tg-del" aria-hidden="true" tabindex="-1"><img
+                        class="thumb"
+                        src="../../assets/images/den-ban-led-cam-ung.jpg"
+                        alt="Đèn bàn LED cảm ứng 3 chế độ" loading="lazy"></td>
+                    <td><b>Đèn bàn LED cảm ứng 3 chế độ</b><span class="sub">TTL-DC-018 · Philips</span></td>
+                    <td><span class="badge b-user">Đồ dùng học tập</span></td>
+                    <td class="num">549.000đ</td>
+                    <td><span class="badge b-ok">Còn 14</span></td>
+                    <td><span class="muted">Chưa bán</span></td>
+                    <td><span class="badge b-ok st-on">Đang bán</span><span class="badge b-gray st-off">Đã ẩn</span></td>
+                    <td class="acts"><a class="btn btn-out btn-sm" href="product-edit-3.html">Sửa</a><label
+                        class="btn btn-danger btn-sm" for="cf-18" role="button">Xoá</label><input type="checkbox"
+                        id="cf-18" class="mchk" aria-hidden="true" tabindex="-1">
+                      <div class="modal" role="dialog" aria-label="Xoá sản phẩm?">
+                        <div class="modal-box">
+                          <div class="modal-ic">!</div>
+                          <h3>Xoá sản phẩm?</h3>
+                          <p>Sản phẩm <b>Đèn bàn LED cảm ứng 3 chế độ</b> (TTL-DC-018) chưa được bán lần nào. Bạn có
+                            chắc muốn xoá hẳn? Thao tác này không thể hoàn tác.</p>
+                          <div class="modal-act"><label class="btn btn-out" for="cf-18">Huỷ</label><label
+                              class="btn btn-dng-fill" for="x-18">Xoá sản phẩm</label></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cat-pagination"><a href="#" class="cat-pag-active">1</a><a href="#">2</a><a href="#">3</a><a
+                href="#">→</a></div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>

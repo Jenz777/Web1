@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Đăng ký tài khoản | TTL Shop</title>
+      <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/ui-overrides.css">
+</head>
+
+<body>
+  <!-- ===== Thanh thông báo trên cùng ===== -->
+  <!-- ===== Thanh thông báo trên cùng ===== -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <b>Miễn phí giao hàng cho đơn từ 300.000đ</b>
+      <div class="topbar-links">
+        <span>Thông báo sản phẩm mới mỗi tuần</span>
+        <a href="#contact">Hỗ trợ: 1900 1234</a>
+      </div>
+    </div>
+  </div>
+  <!-- ===== Header: logo, tìm kiếm, đăng nhập, giỏ hàng + menu ===== -->
+  <!-- ===== Header: logo, tìm kiếm, đăng nhập, giỏ hàng + menu ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="../../index.html">
+        <img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm">
+      </a>
+      <form class="search" action="../tim-kiem/tim-kiem.html#tab-co-ban">
+        <input type="search" name="q" placeholder="Tìm sản phẩm...">
+        <button type="submit">Tìm</button>
+      </form>
+      <div class="header-actions">
+        <a class="account-link" href="login.html">
+          <span class="account-icon" aria-hidden="true"></span>
+          <span>Tài khoản</span>
+        </a>
+        <a class="order-link" href="../mua-hang/kiem-tra-don-hang.html"><span class="order-icon"
+            aria-hidden="true"></span><span>Kiểm tra đơn</span></a>
+        <a class="cart-link" href="../mua-hang/cart.html">
+          <span class="cart-icon" aria-hidden="true"></span>
+          <span>Giỏ hàng</span>
+          <span class="cart-badge">5</span>
+        </a>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="nav-link" href="../../index.html">Trang chủ</a>
+        <a class="nav-link" href="../danh-muc/category-so-tay.html">Sổ tay</a>
+        <a class="nav-link" href="../danh-muc/category-but-viet.html">Bút viết</a>
+        <a class="nav-link" href="../danh-muc/category-giay-file.html">Giấy &amp; File bìa</a>
+        <a class="nav-link" href="../danh-muc/category-do-dung-hoc-tap.html">Đồ dùng học tập</a>
+        <a class="nav-link" href="../danh-muc/category-mau-hoa-cu.html">Màu &amp; Họa cụ</a>
+        <a class="nav-link nav-hot" href="../danh-muc/top-ban-chay.html">Bán chạy</a>
+        <a class="nav-link" href="../danh-gia.html">Đánh giá</a>
+      </div>
+    </nav>
+  </header>
+  <!-- ===== Nội dung chính của trang ===== -->
+  <!-- ===== Nội dung chính của trang ===== -->
+  <main class="auth-page">
+    <aside class="auth-aside">
+      <h1>Tạo tài khoản mua hàng</h1>
+      <p>Đăng ký miễn phí để đặt hàng nhanh hơn và theo dõi đơn của bạn mọi lúc.</p>
+      <ul class="auth-benefits">
+        <li>Lưu sẵn địa chỉ giao hàng, thanh toán chỉ trong vài bước</li>
+        <li>Theo dõi tình trạng đơn hàng và xem lại lịch sử mua</li>
+        <li>Nhận thông báo sản phẩm mới dành cho thành viên</li>
+        <li>Đánh giá những sản phẩm bạn đã mua</li>
+      </ul>
+    </aside>
+    <section class="auth-card" aria-labelledby="register-title">
+      <h2 id="register-title">Đăng ký tài khoản</h2>
+      <p class="auth-sub">Các ô có dấu <span class="req">*</span> là bắt buộc.</p>
+      <!-- Không có máy chủ: form gửi tới trang "đăng ký thành công" dựng sẵn. Dùng method="post" để mật khẩu không hiện trên thanh địa chỉ. -->
+      <form class="auth-form" action="dang-ky-thanh-cong.html" method="post">
+        <fieldset>
+          <legend>Thông tin cá nhân</legend>
+          <div class="form-grid">
+            <div class="form-field full-row">
+              <label for="fullname">Họ và tên<span class="req"> *</span></label>
+              <input id="fullname" name="fullname" type="text" placeholder="VD: Nguyễn Văn An" required minlength="2"
+                autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="email">Email<span class="req"> *</span></label>
+              <input id="email" name="email" type="email" placeholder="ten@example.com" aria-describedby="email-hint"
+                required autocomplete="email">
+              <p class="form-hint" id="email-hint">Dùng để đăng nhập và nhận thông báo đơn hàng.</p>
+            </div>
+            <div class="form-field">
+              <label for="phone">Số điện thoại<span class="req"> *</span></label>
+              <input id="phone" name="phone" type="tel" placeholder="VD: 0912345678" aria-describedby="phone-hint"
+                required pattern="(0|\+84)[0-9]{9}" title="Số điện thoại gồm 10 số, bắt đầu bằng 0 hoặc +84"
+                autocomplete="tel">
+              <p class="form-hint" id="phone-hint">Gồm 10 số, bắt đầu bằng 0.</p>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Địa chỉ giao hàng mặc định</legend>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="province">Tỉnh / thành phố<span class="req"> *</span></label>
+              <select id="province" name="province" required autocomplete="address-level1">
+                <option value="">-- Chọn tỉnh / thành phố --</option>
+                <option value="Hà Nội">Hà Nội</option>
+                <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
+                <option value="Đà Nẵng">Đà Nẵng</option>
+                <option value="Hải Phòng">Hải Phòng</option>
+                <option value="Cần Thơ">Cần Thơ</option>
+                <option value="Tỉnh / thành phố khác">Tỉnh / thành phố khác</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="district">Quận / huyện<span class="req"> *</span></label>
+              <input id="district" name="district" type="text" placeholder="VD: Quận 5" required
+                autocomplete="address-level2">
+            </div>
+            <div class="form-field full-row">
+              <label for="address">Địa chỉ cụ thể<span class="req"> *</span></label>
+              <input id="address" name="address" type="text" placeholder="Số nhà, tên đường, phường / xã"
+                aria-describedby="address-hint" required autocomplete="street-address">
+              <p class="form-hint" id="address-hint">Bạn có thể nhập địa chỉ khác khi thanh toán.</p>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Bảo mật</legend>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="password">Mật khẩu<span class="req"> *</span></label>
+              <input id="password" name="password" type="password" placeholder="Tối thiểu 6 ký tự"
+                aria-describedby="password-hint" required minlength="6" autocomplete="new-password">
+              <p class="form-hint" id="password-hint">Tối thiểu 6 ký tự.</p>
+            </div>
+            <div class="form-field">
+              <label for="password2">Nhập lại mật khẩu<span class="req"> *</span></label>
+              <input id="password2" name="password2" type="password" placeholder="Nhập lại mật khẩu"
+                aria-describedby="password2-hint" required minlength="6" autocomplete="new-password">
+              <p class="form-hint" id="password2-hint">Nhập giống mật khẩu ở ô bên cạnh.</p>
+            </div>
+          </div>
+        </fieldset>
+        <label class="auth-check"><input type="checkbox" name="agree" required><span>Tôi đồng ý với <a href="#">Điều
+              khoản sử dụng</a> và <a href="#">Chính sách bảo mật thông tin cá nhân</a>.<span class="req">
+              *</span></span></label> <button class="btn btn-primary full" type="submit">Tạo tài khoản</button>
+        <p class="auth-switch">Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+      </form>
+    </section>
+  </main>
+  <!-- ===== Footer ===== -->
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo logo-footer">
+          <img class="logo-img" src="../../assets/images/logo.png" alt="TTL Shop – Văn phòng phẩm">
+        </div>
+        <p class="footer-branch"><b>Chi nhánh Hà Nội:</b> 260 Lê Trọng Tấn, Thanh Xuân, Hà Nội</p><p class="footer-branch"><b>Chi nhánh TP. Hồ Chí Minh:</b> 273 An Dương Vương, Phường Chợ Quán, TP. Hồ Chí Minh</p><p>1900 1234 — hotro@ttlshop.vn</p>
+      </div>
+      <div class="footer-col">
+        <h4>Về chúng tôi</h4>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Thông tin liên hệ</a>
+        <a href="#">Chính sách bảo mật thông tin cá nhân</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hỗ trợ khách hàng</h4>
+        <a href="#">Hướng dẫn mua hàng</a>
+        <a href="#">Hướng dẫn thanh toán</a>
+        <a href="#">Chính sách giao hàng</a>
+        <a href="#">Chính sách đổi trả &amp; hoàn tiền</a>
+        <a href="#">Thông tin liên hệ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Thanh toán</h4>
+        <div class="pay-methods"><span class="pay-item"><span class="pay-ico pay-visa"
+              aria-hidden="true"></span>Visa</span><span class="pay-item"><span class="pay-ico pay-visa"
+              aria-hidden="true"></span>Mastercard</span><span class="pay-item"><span class="pay-ico pay-bank"
+              aria-hidden="true"></span>Ngân hàng</span><span class="pay-item"><span class="pay-ico pay-momo"
+              aria-hidden="true"></span>Momo</span><span class="pay-item"><span class="pay-ico pay-zalo"
+              aria-hidden="true"></span>ZaloPay</span><span class="pay-item"><span class="pay-ico pay-cod"
+              aria-hidden="true"></span>COD</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 TTL Shop. Mọi quyền được bảo lưu.</div>
+  </footer>
+</body>
+
+</html>
