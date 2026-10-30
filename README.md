@@ -41,10 +41,8 @@ ttlshop/
 │   ├── quan-tri-vien/          admins, admin-add, admin-edit-*, admin-saved
 │   └── thong-ke/               stats (top 5 khách mua nhiều nhất)
 │
-└── tools/tai-anh-ve-may.py     Script cũ tải ảnh về máy (ảnh đã có sẵn, không cần chạy)
 ```
 
 ## Quy ước
 - Trang người mua nằm trong `pages/<nhóm>/`; trang admin nằm trong `admin/<nhóm>/`.
 - CSS/ảnh/font dùng chung để trong `assets/`; chỉ CSS/JS của admin để trong `admin/assets/`.
-- Tên file giữ nguyên như bản cũ, chỉ đổi vị trí; toàn bộ đường dẫn đã được cập nhật (đã kiểm tra, không có link gãy).

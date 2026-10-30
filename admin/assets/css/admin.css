@@ -74,8 +74,6 @@ small{display:block;font-weight:400;font-size:.75rem;opacity:.75}
 #pc-0:checked~.tabs label[for=pc-0],#pc-1:checked~.tabs label[for=pc-1],#pc-2:checked~.tabs label[for=pc-2],#pc-3:checked~.tabs label[for=pc-3],#pc-4:checked~.tabs label[for=pc-4],#pc-5:checked~.tabs label[for=pc-5],
 #of-0:checked~.tabs label[for=of-0],#of-1:checked~.tabs label[for=of-1],#of-2:checked~.tabs label[for=of-2],#of-3:checked~.tabs label[for=of-3],#of-4:checked~.tabs label[for=of-4],
 #uf-all:checked~.tabs label[for=uf-all],#uf-ok:checked~.tabs label[for=uf-ok],#uf-lock:checked~.tabs label[for=uf-lock]{background:var(--p500);border-color:var(--p500);color:#fff}
-#pc-1:checked~.tbl-wrap tbody tr:not(.c1),#pc-2:checked~.tbl-wrap tbody tr:not(.c2),#pc-3:checked~.tbl-wrap tbody tr:not(.c3),#pc-4:checked~.tbl-wrap tbody tr:not(.c4),#pc-5:checked~.tbl-wrap tbody tr:not(.c5){display:none}
-#uf-ok:checked~.tbl-wrap tr:has(.lk:checked),#uf-lock:checked~.tbl-wrap tbody tr:not(:has(.lk:checked)){display:none}
 /* phân trang (cùng kiểu .cat-pagination của cửa hàng; web tĩnh nên href="#") */
 .cat-pagination{display:flex;justify-content:center;gap:6px;margin-top:22px;padding-top:18px;border-top:1px solid var(--n200)}
 .cat-pagination a{min-width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--n200);border-radius:10px;background:#fff;color:var(--n700);font-size:.9rem;font-weight:600;transition:all .15s;cursor:pointer}
