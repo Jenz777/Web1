@@ -1,4 +1,4 @@
-# TTL Shop – Đồ án Web1 (website tĩnh HTML/CSS)
+# TTL Shop – Đồ án Web1 (website tĩnh HTML/CSS/JS)
 
 Mở `index.html` để vào trang chủ cửa hàng. Khu quản trị: `admin/login.html` (có link chuyển qua lại với `pages/auth/login.html`).
 Không có cơ sở dữ liệu và không xử lý logic: dữ liệu là mẫu, các trang chỉ là giao diện.
