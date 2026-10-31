@@ -75,29 +75,26 @@
     </aside>
     <section class="auth-card" aria-labelledby="register-title">
       <h2 id="register-title">Đăng ký tài khoản</h2>
-      <p class="auth-sub">Các ô có dấu <span class="req">*</span> là bắt buộc.</p>
+      <p class="auth-sub">Tạo tài khoản để mua hàng nhanh hơn và theo dõi đơn hàng.</p>
       <!-- Không có máy chủ: form gửi tới trang "đăng ký thành công" dựng sẵn. Dùng method="post" để mật khẩu không hiện trên thanh địa chỉ. -->
-      <form class="auth-form" action="dang-ky-thanh-cong.html" method="post">
+      <form novalidate class="auth-form" action="dang-ky-thanh-cong.html" method="post">
         <fieldset>
           <legend>Thông tin cá nhân</legend>
           <div class="form-grid">
             <div class="form-field full-row">
-              <label for="fullname">Họ và tên<span class="req"> *</span></label>
-              <input id="fullname" name="fullname" type="text" placeholder="VD: Nguyễn Văn An" required minlength="2"
+              <label for="fullname">Họ và tên</label>
+              <input id="fullname" name="fullname" type="text" placeholder="VD: Nguyễn Văn An"
                 autocomplete="name">
             </div>
             <div class="form-field">
-              <label for="email">Email<span class="req"> *</span></label>
-              <input id="email" name="email" type="email" placeholder="ten@example.com" aria-describedby="email-hint"
-                required autocomplete="email">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="text" inputmode="email" placeholder="ten@example.com" aria-describedby="email-hint" autocomplete="email">
               <p class="form-hint" id="email-hint">Dùng để đăng nhập và nhận thông báo đơn hàng.</p>
             </div>
             <div class="form-field">
-              <label for="phone">Số điện thoại<span class="req"> *</span></label>
-              <input id="phone" name="phone" type="tel" placeholder="VD: 0912345678" aria-describedby="phone-hint"
-                required pattern="(0|\+84)[0-9]{9}" title="Số điện thoại gồm 10 số, bắt đầu bằng 0 hoặc +84"
+              <label for="phone">Số điện thoại</label>
+              <input id="phone" name="phone" type="tel" placeholder="VD: 0912345678"
                 autocomplete="tel">
-              <p class="form-hint" id="phone-hint">Gồm 10 số, bắt đầu bằng 0.</p>
             </div>
           </div>
         </fieldset>
@@ -105,8 +102,8 @@
           <legend>Địa chỉ giao hàng mặc định</legend>
           <div class="form-grid">
             <div class="form-field">
-              <label for="province">Tỉnh / thành phố<span class="req"> *</span></label>
-              <select id="province" name="province" required autocomplete="address-level1">
+              <label for="province">Tỉnh / thành phố</label>
+              <select id="province" name="province" autocomplete="address-level1">
                 <option value="">-- Chọn tỉnh / thành phố --</option>
                 <option value="Hà Nội">Hà Nội</option>
                 <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
@@ -117,14 +114,14 @@
               </select>
             </div>
             <div class="form-field">
-              <label for="district">Quận / huyện<span class="req"> *</span></label>
-              <input id="district" name="district" type="text" placeholder="VD: Quận 5" required
+              <label for="district">Quận / huyện</label>
+              <input id="district" name="district" type="text" placeholder="VD: Quận 5"
                 autocomplete="address-level2">
             </div>
             <div class="form-field full-row">
-              <label for="address">Địa chỉ cụ thể<span class="req"> *</span></label>
+              <label for="address">Địa chỉ cụ thể</label>
               <input id="address" name="address" type="text" placeholder="Số nhà, tên đường, phường / xã"
-                aria-describedby="address-hint" required autocomplete="street-address">
+                aria-describedby="address-hint" autocomplete="street-address">
               <p class="form-hint" id="address-hint">Bạn có thể nhập địa chỉ khác khi thanh toán.</p>
             </div>
           </div>
@@ -133,22 +130,17 @@
           <legend>Bảo mật</legend>
           <div class="form-grid">
             <div class="form-field">
-              <label for="password">Mật khẩu<span class="req"> *</span></label>
-              <input id="password" name="password" type="password" placeholder="Tối thiểu 6 ký tự"
-                aria-describedby="password-hint" required minlength="6" autocomplete="new-password">
-              <p class="form-hint" id="password-hint">Tối thiểu 6 ký tự.</p>
+              <label for="password">Mật khẩu</label>
+              <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" autocomplete="new-password">
             </div>
             <div class="form-field">
-              <label for="password2">Nhập lại mật khẩu<span class="req"> *</span></label>
-              <input id="password2" name="password2" type="password" placeholder="Nhập lại mật khẩu"
-                aria-describedby="password2-hint" required minlength="6" autocomplete="new-password">
-              <p class="form-hint" id="password2-hint">Nhập giống mật khẩu ở ô bên cạnh.</p>
+              <label for="password2">Nhập lại mật khẩu</label>
+              <input id="password2" name="password2" type="password" placeholder="Nhập lại mật khẩu" autocomplete="new-password">
             </div>
           </div>
         </fieldset>
-        <label class="auth-check"><input type="checkbox" name="agree" required><span>Tôi đồng ý với <a href="#">Điều
-              khoản sử dụng</a> và <a href="#">Chính sách bảo mật thông tin cá nhân</a>.<span class="req">
-              *</span></span></label> <button class="btn btn-primary full" type="submit">Tạo tài khoản</button>
+        <label class="auth-check"><input type="checkbox" name="agree"><span>Tôi đồng ý với <a href="#">Điều
+              khoản sử dụng</a> và <a href="#">Chính sách bảo mật thông tin cá nhân</a>.</span></label> <button class="btn btn-primary full" type="submit">Tạo tài khoản</button>
         <p class="auth-switch">Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
       </form>
     </section>
