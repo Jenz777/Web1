@@ -1,0 +1,47 @@
+/* Chi tiết / sửa sản phẩm ở admin: dùng lại đúng giao diện trang sản phẩm của khách (product-detail.css).
+   Chỉ HTML + CSS, không JavaScript. */
+@import url("../../../assets/css/product-detail.css");
+
+/* Bảng màu của cửa hàng, chỉ áp dụng trong khung .pda (không ảnh hưởng phần còn lại của admin) */
+.pda{
+  --font:"Be Vietnam Pro",system-ui,-apple-system,sans-serif;
+  --primary-50:#e8fbf7;--primary-100:#c7f1e8;--primary-500:#00a99d;--primary-600:#008d83;--primary-700:#006e68;
+  --accent-500:#ffb629;--accent-600:#ed8b00;
+  --neutral-0:#fff;--neutral-50:#fffaf2;--neutral-100:#fff2de;--neutral-200:#f2dec3;--neutral-300:#d9c4a8;
+  --neutral-500:#756755;--neutral-700:#40372e;--neutral-900:#25201b;
+  --success:#2f9e5e;--surface:#fff;--text:#25201b;--muted:#756755;
+  --radius:14px;--radius-sm:8px;--radius-lg:22px;
+  --shadow-sm:0 1px 2px rgba(28,26,23,.06);--shadow:0 6px 24px -10px rgba(28,26,23,.18);
+}
+.pd-page.pda{max-width:none;padding:0}
+.pda .pd-crumb span{color:var(--muted)}
+.pda .pd-crumb [aria-current]{color:var(--text)}
+.pda-note{margin:0 0 16px;padding:12px 16px;border-radius:12px;background:#e8fbf7;border:1px solid #c7f1e8;color:#006e68;font-size:.92rem}
+
+/* Khung thông tin quản lý (chỉ admin thấy) */
+.pda-box{margin:0 0 18px;padding:14px 18px;border:1px solid #c7f1e8;background:#f4fefb;border-radius:var(--radius)}
+.pda-box>b{display:block;margin-bottom:8px;color:var(--primary-700);font-size:14px}
+.pda-box dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:14px}
+.pda-box dt{color:var(--muted)}.pda-box dd{margin:0;font-weight:600}
+.pda-box .grid-2f{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+/* Ô chỉnh sửa: viền nét đứt để phân biệt với nội dung chỉ xem */
+.pda .ed-lbl{display:block;font-size:12px;font-weight:600;color:var(--muted);margin:14px 0 4px}
+.pda .ed-lbl .req{color:#e5484d}
+.pda .ed{width:100%;font:inherit;color:var(--text);background:#f4fefb;border:1px dashed #7fd4cc;border-radius:var(--radius-sm);padding:9px 12px}
+.pda .ed:focus{outline:2px solid var(--primary-500);outline-offset:1px;border-style:solid;background:#fff}
+.pda .ed[readonly]{background:var(--neutral-50);border-color:var(--neutral-200);color:var(--muted);cursor:not-allowed}
+.pda textarea.ed{resize:vertical;line-height:1.6}
+.pda .ed-title{font-size:22px;font-weight:700;line-height:1.3}
+.pda .pd-price .ed-price{width:210px;font-size:26px;font-weight:700;color:var(--accent-600);padding:6px 12px}
+.pda .pd-price{margin-top:6px}
+.pda .pd-info .pd-meta{margin-top:14px}
+.pda .pd-media .pv-note{margin:12px 0 8px;font-size:.85rem;color:var(--muted)}
+.pda .pd-media .file-in{width:100%}
+.pda .pd-spec .ed{padding:7px 10px}
+.pda .pd-spec th{padding:8px 10px}.pda .pd-spec td{padding:8px 10px}
+.pda .ed-hint{display:block;margin-top:6px;font-size:12.5px;color:var(--muted)}
+.pda .pd-panel .ed-lbl:first-of-type{margin-top:0}
+.pda-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;padding:18px 22px;background:#fff;border:1px solid var(--neutral-200);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+@media (max-width:980px){.pda .pd-top{padding:18px}}
+@media (max-width:600px){.pda .pd-price .ed-price{width:100%}.pda-box .grid-2f{grid-template-columns:1fr}}
