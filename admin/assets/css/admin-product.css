@@ -45,3 +45,18 @@
 .pda-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;padding:18px 22px;background:#fff;border:1px solid var(--neutral-200);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
 @media (max-width:980px){.pda .pd-top{padding:18px}}
 @media (max-width:600px){.pda .pd-price .ed-price{width:100%}.pda-box .grid-2f{grid-template-columns:1fr}}
+
+/* Trang thêm sản phẩm: khung ảnh trống khi chưa chọn ảnh */
+.pda .pd-media img[hidden]{display:none}
+.pda .pd-media .pv{aspect-ratio:1/1;border:2px dashed #7fd4cc;border-radius:var(--radius);background:#f4fefb;display:grid;place-items:center;overflow:hidden;color:var(--muted);font-weight:600}
+.pda .pd-media .pv img{width:100%;height:100%;object-fit:cover}
+
+/* ===== Trang thêm sản phẩm: tên thông số tự đổi theo phân loại (thuần CSS bằng :has) ===== */
+.pd-spec .sp-so-tay,.pd-spec .sp-but-viet,.pd-spec .sp-dung-cu,.pd-spec .sp-giay,.pd-spec .sp-mau{display:none}
+.pd-spec .sp-hint td{padding:14px 16px;background:#fff8e6;color:#7a5a12;font-size:.92rem;border-radius:10px}
+form:has(#pc option[value="so-tay"]:checked) .pd-spec .sp-so-tay,
+form:has(#pc option[value="but-viet"]:checked) .pd-spec .sp-but-viet,
+form:has(#pc option[value="dung-cu"]:checked) .pd-spec .sp-dung-cu,
+form:has(#pc option[value="giay"]:checked) .pd-spec .sp-giay,
+form:has(#pc option[value="mau"]:checked) .pd-spec .sp-mau{display:table-row}
+form:has(#pc option:not([value=""]):checked) .pd-spec .sp-hint{display:none}
